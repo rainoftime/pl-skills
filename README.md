@@ -1,10 +1,10 @@
 <h1 align="center"><strong>✨ Skills-4-PL</strong>: Programming Languages Research Skills for LLM Agents</h1>
 
-> A comprehensive collection of skills for Programming Languages research and development, covering POPL (theory), PLDI (implementation), and OOPSLA (systems) topics.
+> A comprehensive collection of skills for Programming Languages research and development.
 
 <p align="center">
 <a href="https://platform.composio.dev/?utm_source=Github&utm_medium=Youtube&utm_campaign=2025-11&utm_content=AwesomeSkills">
-  <img width="1280" height="640" alt="Composio banner" src="./banner.png">
+  <img width="1280" height="640" alt="Skills-4-PL banner" src="./banner.svg">
 </a>
 
 [![Welcome Contribution](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](./CONTRIBUTING.md)
@@ -25,9 +25,9 @@ Browse, search, and install skills through our interactive web interface.
 
 This repository contains **99 PL research skills** designed for:
 
-- **POPL researchers** - Type systems, formal semantics, proof assistants
-- **PLDI practitioners** - Compiler passes, program analysis, optimizations  
-- **OOPSLA engineers** - Runtime systems, verification, concurrency
+- **PL researchers** - Type systems, formal semantics, proof assistants
+- **Compiler practitioners** - Compiler passes, program analysis, optimizations  
+- **Systems engineers** - Runtime systems, verification, concurrency
 - **Graduate students** - Learning PL concepts through working implementations
 - **Tool builders** - Building compilers, analyzers, and verifiers
 
@@ -38,9 +38,9 @@ Each skill is a **self-contained implementation** that can solve real PL researc
 
 ---
 
-## 🎯 Skills by Conference Track
+## 🎯 Skills by Topic
 
-### 🔬 POPL (Theory) — Type Systems & Formal Semantics
+### 🔬 Type Systems & Formal Semantics
 
 | Skill | Description |
 |-------|-------------|
@@ -61,7 +61,7 @@ Each skill is a **self-contained implementation** that can solve real PL researc
 | [higher-order-abstract-syntax](./higher-order-abstract-syntax/) | HOAS for binder representation |
 | [type-directed-name-resolution](./type-directed-name-resolution/) | Type-guided name disambiguation |
 
-### 📐 POPL (Theory) — Formal Semantics
+### 📐 Formal Semantics
 
 | Skill | Description |
 |-------|-------------|
@@ -74,7 +74,7 @@ Each skill is a **self-contained implementation** that can solve real PL researc
 
 ---
 
-### ⚙️ PLDI (Implementation) — Compilers & Interpreters
+### ⚙️ Compilers & Interpreters
 
 | Skill | Description |
 |-------|-------------|
@@ -91,7 +91,7 @@ Each skill is a **self-contained implementation** that can solve real PL researc
 | [multi-stage-programming](./multi-stage-programming/) | Staged compilation and code gen |
 | [dsl-embedding](./dsl-embedding/) | Embedding DSLs in host languages |
 
-### 📊 PLDI (Implementation) — Program Analysis
+### 📊 Program Analysis
 
 | Skill | Description |
 |-------|-------------|
@@ -103,7 +103,7 @@ Each skill is a **self-contained implementation** that can solve real PL researc
 
 ---
 
-### ⚡ OOPSLA (Systems) — Runtime & Optimization
+### ⚡ Runtime & Optimization
 
 | Skill | Description |
 |-------|-------------|
@@ -112,7 +112,7 @@ Each skill is a **self-contained implementation** that can solve real PL researc
 | [common-subexpression-eliminator](./common-subexpression-eliminator/) | CSE optimization pass |
 | [incremental-computation](./incremental-computation/) | Change propagation and adaptivity |
 
-### 🔒 OOPSLA (Systems) — Verification
+### 🔒 Verification
 
 | Skill | Description |
 |-------|-------------|
@@ -121,7 +121,7 @@ Each skill is a **self-contained implementation** that can solve real PL researc
 | [loop-termination-prover](./loop-termination-prover/) | Proves loop termination |
 | [weak-memory-model-verifier](./weak-memory-model-verifier/) | Verifies weak memory behaviors |
 
-### 🔀 OOPSLA (Systems) — Concurrency
+### 🔀 Concurrency
 
 | Skill | Description |
 |-------|-------------|
