@@ -17,59 +17,25 @@
 
 这些技能由 LLM 生成，可能包含**幻觉、事实错误或不正确的引用**。人工验证正在进行中。
 
-| 技能 | 状态 | 验证者 |
-|-------|--------|-------------|
-| type-checker-generator | ❌ 未验证 | |
-| type-inference-engine | ❌ 未验证 | |
-| subtyping-verifier | ❌ 未验证 | |
-| simply-typed-lambda-calculus | ❌ 未验证 | |
-| dependent-type-implementer | ❌ 未验证 | |
-| linear-type-implementer | ❌ 未验证 | |
-| session-type-checker | ❌ 未验证 | |
-| ownership-type-system | ❌ 未验证 | |
-| effect-type-system | ❌ 未验证 | |
-| refinement-type-checker | ❌ 未验证 | |
-| relational-parametricity-prover | ❌ 未验证 | |
-| bidirectional-type-checking | ❌ 未验证 | |
-| row-polymorphism | ❌ 未验证 | |
-| polymorphic-effects | ❌ 未验证 | |
-| higher-order-abstract-syntax | ❌ 未验证 | |
-| type-directed-name-resolution | ❌ 未验证 | |
-| operational-semantics-definer | ❌ 未验证 | |
-| denotational-semantics-builder | ❌ 未验证 | |
-| hoare-logic-verifier | ❌ 未验证 | |
-| separation-logician | ❌ 未验证 | |
-| coq-proof-assistant | ❌ 未验证 | |
-| bisimulation-checker | ❌ 未验证 | |
-| lambda-calculus-interpreter | ❌ 未验证 | |
-| closure-converter | ❌ 未验证 | |
-| lexer-generator | ❌ 未验证 | |
-| parser-generator | ❌ 未验证 | |
-| ssa-constructor | ❌ 未验证 | |
-| jit-compiler-builder | ❌ 未验证 | |
-| typed-assembly-language | ❌ 未验证 | |
-| cps-transformer | ❌ 未验证 | |
-| partial-evaluator | ❌ 未验证 | |
-| defunctionalization | ❌ 未验证 | |
-| multi-stage-programming | ❌ 未验证 | |
-| dsl-embedding | ❌ 未验证 | |
-| dataflow-analysis-framework | ❌ 未验证 | |
-| abstract-interpretation-engine | ❌ 未验证 | |
-| alias-and-points-to-analysis | ❌ 未验证 | |
-| taint-analysis | ❌ 未验证 | |
-| model-checker | ❌ 未验证 | |
-| garbage-collector-implementer | ❌ 未验证 | |
-| constant-propagation-pass | ❌ 未验证 | |
-| common-subexpression-eliminator | ❌ 未验证 | |
-| incremental-computation | ❌ 未验证 | |
-| symbolic-execution-engine | ❌ 未验证 | |
-| invariant-generator | ❌ 未验证 | |
-| loop-termination-prover | ❌ 未验证 | |
-| weak-memory-model-verifier | ❌ 未验证 | |
-| actor-model-implementer | ❌ 未验证 | |
-| software-transactional-memory | ❌ 未验证 | |
-| race-detection-tool | ❌ 未验证 | |
-| *(其他技能)* | ❌ 未验证 | |
+| | | | | | |
+|---|---|---|---|---|---|
+| abstract-interpretation-engine ❌ | abstract-machine ❌ | acsl-annotation-assistant ❌ | actor-model-implementer ❌ | algebraic-effects ❌ | alias-and-points-to-analysis ❌ |
+| axiomatic-semantics ❌ | bidirectional-type-checking ❌ | bisimulation-checker ❌ | capability-system ❌ | closure-converter ❌ | common-subexpression-eliminator ❌ |
+| concurrency-verifier ❌ | constant-propagation-pass ❌ | contextual-equivalence ❌ | control-flow-analysis ❌ | coq-proof-assistant ❌ | cps-transformer ❌ |
+| dafny-verifier ❌ | dataflow-analysis-framework ❌ | dead-code-eliminator ❌ | defunctionalization ❌ | denotational-semantics-builder ❌ | dependent-type-implementer ❌ |
+| dsl-embedding ❌ | effect-handlers-implementer ❌ | effect-system ❌ | effect-type-system ❌ | escape-analysis ❌ | existential-types ❌ |
+| ffi-designer ❌ | fuzzer-generator ❌ | gadt-implementer ❌ | garbage-collector-implementer ❌ | graalvm-truffle-implementer ❌ | gradual-typing-implementer ❌ |
+| higher-order-abstract-syntax ❌ | hoare-logic-verifier ❌ | incremental-computation ❌ | information-flow-analyzer ❌ | inline-expander ❌ | interprocedural-analysis ❌ |
+| invariant-generator ❌ | jit-compiler-builder ❌ | lambda-calculus-interpreter ❌ | language-server-protocol ❌ | lean-prover ❌ | lexer-generator ❌ |
+| linear-type-implementer ❌ | liveness-analysis ❌ | llvm-backend-generator ❌ | lock-free-data-structure ❌ | loop-optimizer ❌ | loop-termination-prover ❌ |
+| macro-expander ❌ | memory-allocator ❌ | message-passing-system ❌ | mlir-dialect-designer ❌ | model-checker ❌ | module-system ❌ |
+| monad-transformer ❌ | multi-stage-programming ❌ | operational-semantics-definer ❌ | ownership-type-system ❌ | parser-generator ❌ | partial-evaluator ❌ |
+| polymorphic-effects ❌ | program-transformer ❌ | property-based-tester ❌ | race-detection-tool ❌ | reduction-semantics ❌ | refinement-type-checker ❌ |
+| register-allocator ❌ | relational-parametricity-prover ❌ | row-polymorphism ❌ | rust-borrow-checker ❌ | sandbox-builder ❌ | separation-logician ❌ |
+| session-type-checker ❌ | shape-analysis ❌ | simply-typed-lambda-calculus ❌ | smt-solver-interface ❌ | software-transactional-memory ❌ | ssa-constructor ❌ |
+| subtyping-verifier ❌ | symbolic-execution-engine ❌ | system-f ❌ | taint-analysis ❌ | transactional-memory ❌ | type-checker-generator ❌ |
+| type-class-implementer ❌ | type-directed-name-resolution ❌ | type-inference-engine ❌ | typed-assembly-language ❌ | value-analysis ❌ | weak-memory-model-verifier ❌ |
+| webassembly-runtime ❌ | webassembly-verifier ❌ | | | | |
 
 **图例：** ✅ 已验证 | 🔶 部分验证 | ❌ 未验证
 
