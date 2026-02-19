@@ -65,9 +65,10 @@ Reduction semantics defines evaluation through rewrite rules on program terms, u
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| Felleisen, Hieb "The revised report on the syntactic theories of control" | Evaluation contexts |
-| Wright, Felleisen "A Syntactic Approach to Type Soundness" | Type safety via contexts |
-| Plotkin "Call-by-name, call-by-value and the λ-calculus" | Evaluation strategies |
+| **Felleisen & Hieb, "The Revised Report on the Syntactic Theories of Control" (1992)** | Evaluation contexts |
+| **Wright & Felleisen, "A Syntactic Approach to Type Soundness" (1994)** | Type safety via contexts |
+| **Plotkin, "Call-by-Name, Call-by-Value and the λ-Calculus" (1975)** | Evaluation strategies |
+| **Barendregt, "The Lambda Calculus" (1984)** | Comprehensive λ-calculus reference |
 
 ## Tradeoffs and Limitations
 

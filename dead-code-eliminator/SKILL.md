@@ -65,9 +65,9 @@ Dead code elimination (DCE) removes code that has no effect on program output, i
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| Muchnick "Advanced Compiler Design" Ch. 18 | Comprehensive treatment |
-| Click "Global code motion/global value numbering" | Modern DCE approach |
-| LLVM Dead Code Elimination Pass | Production implementation |
+| **Muchnick, "Advanced Compiler Design and Implementation", Ch. 18 (1997)** | Comprehensive treatment |
+| **Click & Cooper, "Combining Analyses, Optimizing and Using Them" (1995)** | Modern DCE approach |
+| **LLVM Dead Code Elimination Pass** | Production implementation |
 
 ## Tradeoffs and Limitations
 

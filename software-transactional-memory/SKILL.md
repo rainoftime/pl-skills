@@ -71,15 +71,16 @@ STM implementations:
 
 | System | Language | What to Learn |
 |--------|----------|---------------|
-| **Haskell STM** | Haskell | Original STM |
+| **Haskell STM** | Haskell | Composable transactions |
 | **Clojure refs** | Clojure | Production STM |
-| **Intel STM** | C/C++ | Hardware support |
+| **Intel TSX** | C/C++ | Hardware support |
 | **TinySTM** | C | Fast STM |
 
 ### Key Papers
 
-- **Herlihy & Moss** - STM paper
-- **Harris et al.** - Composable memory transactions
+- **Shavit & Touitou (1997)** - Original software transactional memory paper
+- **Herlihy & Moss (1993)** - Hardware transactional memory
+- **Harris et al. (2005)** - Composable memory transactions (Haskell STM)
 
 ## Research Frontiers
 

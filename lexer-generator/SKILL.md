@@ -72,11 +72,11 @@ Generates lexical analyzers (tokenizers) from regex specifications.
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| **Aho, Lam, Sethi, Ullman, "Compilers: Principles, Techniques, and Tools"** | Dragon Book; chapters 3-4 on lexical analysis |
-| **Thompson, "Programming Techniques: Regular Expression Search Algorithm"** | Original NFA construction |
-| **McNaughton & Yamada, "Regular Expressions and State Graphs"** | DFA construction |
-| **Fischer & LeBlanc, "Crafting a Compiler"** | Practical lexer design |
-| **Russ Cox, "Regular Expression Matching Can Be Simple and Fast"** | Modern regex implementation |
+| **Aho et al., "Compilers: Principles, Techniques, and Tools" (1986)** | Dragon Book; chapters 3-4 on lexical analysis |
+| **Thompson, "Programming Techniques: Regular Expression Search Algorithm" (1968)** | Original NFA construction |
+| **McNaughton & Yamada, "Regular Expressions and State Graphs" (1960)** | DFA construction |
+| **Fischer & LeBlanc, "Crafting a Compiler" (1988)** | Practical lexer design |
+| **Russ Cox, "Regular Expression Matching Can Be Simple and Fast" (2007)** | Modern regex implementation |
 
 ## Tradeoffs and Limitations
 

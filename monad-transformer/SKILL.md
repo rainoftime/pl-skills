@@ -52,9 +52,9 @@ Implements monad transformers - reusable layers that add capabilities to monads,
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| Monad Transformers: Step by Step | Comprehensive tutorial |
-| The Transformer Package | Standard library design |
-| Eff Directly in OCaml | Alternative to transformers |
+| **Grabmüller, "Monad Transformers: Step by Step" (2010)** | Comprehensive tutorial on building monad transformers |
+| **Elliott, Marlow, et al., "The Haskell Transformers Library"** | Standard library design for composable monad transformers |
+| **Kiselyov, "Eff: Functional Effects and Monads in OCaml" (2013+)** | Alternative approach to algebraic effects |
 
 ## Tradeoffs and Limitations
 

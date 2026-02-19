@@ -65,9 +65,9 @@ Concurrency verification ensures that parallel programs are free from data races
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| O'Hearn "Resources, concurrency and local reasoning" | Concurrent separation logic |
-| Herlihy, Shavit "The Art of Multiprocessor Programming" | Concurrent algorithms |
-| Demsky, Lam "Concurrency analysis verification" | Static analysis approach |
+| **O'Hearn, "Resources, Concurrency and Local Reasoning" (TCS 2007)** | Concurrent separation logic |
+| **Herlihy & Shavit, "The Art of Multiprocessor Programming"** | Concurrent algorithms |
+| **Herlihy & Wing, "Linearizability: A Correctness Condition for Concurrent Objects" (TOPLAS 1990)** | Correctness criterion |
 
 ## Tradeoffs and Limitations
 
@@ -133,9 +133,9 @@ Current concurrency verification research:
 
 | Direction | Key Papers | Challenge |
 |-----------|------------|-----------|
-| **Weak memory** | "Weak Memory Concurrency" (2020) | x86/ARM/POWER models |
-| **Lock-free** | "Verifying Lock-free Algorithms" (2004) | CAS and queues |
-| **Linearizability** | "Linearizability" (1990) | Atomic object verification |
+| **Weak memory** | Alglave et al. "Weak Memory Models" | x86/ARM/POWER models |
+| **Lock-free** | Various verification approaches | CAS and queues |
+| **Linearizability** | Herlihy & Wing (TOPLAS 1990) | Atomic object verification |
 | **Fencing** | "Fence Inference" (2015) | Minimal memory fences |
 | **Regression** | "Concurrency Bug Detection" (2019) | Finding regression bugs |
 

@@ -328,11 +328,11 @@ class SetLattice(Lattice[Set]):
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| **Aho, Lam, Sethi, Ullman, "Compilers: Principles, Techniques, and Tools"** | Dragon Book; chapters on dataflow |
-| **Kam & Ullman, "Monotone Data Flow Analysis Frameworks"** | Foundational dataflow theory |
-| **Cousot & Cousot, "Abstract Interpretation"** | General framework |
-| **Marlowe & Ryder, "Data Flow Analysis"** | Practical frameworks |
-| **Reps, "Program Analysis via Graph Reachability"** | IFDS/IDE frameworks |
+| **Aho et al., "Compilers: Principles, Techniques, and Tools" (1986)** | Dragon Book; chapters on dataflow |
+| **Kam & Ullman, "Monotone Data Flow Analysis Frameworks" (1977)** | Foundational dataflow theory |
+| **Cousot & Cousot, "Abstract Interpretation" (POPL 1977)** | General framework |
+| **Marlowe & Ryder, "Data Flow Analysis" (1990)** | Practical frameworks |
+| **Reps, "Program Analysis via Graph Reachability" (1998)** | IFDS/IDE frameworks |
 
 ## Tradeoffs and Limitations
 

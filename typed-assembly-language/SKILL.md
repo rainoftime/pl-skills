@@ -34,6 +34,13 @@ Verifies low-level code using typed assembly language (TAL).
 3. **Handles calls** - Stack and calling conventions
 4. **Proves properties** - With Hoare logic
 
+## How to Use
+
+1. Define your machine model (registers, memory, instruction set)
+2. Assign TAL types to registers and code pointers
+3. Check each instruction updates typing environments soundly
+4. Validate control-flow joins and calling-convention invariants
+
 ## Core Theory
 
 ```
@@ -171,8 +178,9 @@ class TALChecker:
             
             case Load(dst, src, offset):
                 # Load from memory
-                if src in env and isinstance(env[src], TPtr(elem)):
-                    addr_type = self.memory.get(offset, elem)
+                if src in env and isinstance(env[src], TPtr):
+                    ptr_ty = env[src]
+                    addr_type = self.memory.get(offset, ptr_ty.elem)
                     return {**env, dst: addr_type}
                 raise TypeError("Invalid load")
             

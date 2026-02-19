@@ -338,6 +338,7 @@ class TraceRecorder:
 | **Inline cache** | Polymorphic call sites |
 | **Trace** | Linear execution path |
 | **Tiered** | Multiple compilation levels |
+| **Speculation** | Optimize assuming types, deopt if wrong |
 
 ## Optimization Levels
 
@@ -358,8 +359,16 @@ class TraceRecorder:
 ## Related Skills
 
 - `garbage-collector-implementer` - Memory management
-- `jit-compiler-builder` - VM design
-- `ssa-constructor` - SSA form
+- `ssa-constructor` - SSA form for JIT IR
+- `llvm-backend-generator` - LLVM ORC JIT
+
+## Canonical References
+
+| Reference | Why It Matters |
+|-----------|----------------|
+| **Hölzle, Chambers & Ungar, "Optimizing Dynamically-Typed Object-Oriented Languages With Polymorphic Inline Caches" (ECOOP 1991)** | Foundational inline caching technique from SELF |
+| **Hölzle, "Adaptive Optimization for SELF" (PhD Thesis, Stanford 1994)** | Comprehensive adaptive optimization techniques |
+| **Gal et al., "Trace-based Just-in-Time Type Specialization for Dynamic Languages" (PLDI 2009)** | Trace JIT methodology |
 
 ## Research Tools & Artifacts
 
@@ -367,9 +376,10 @@ JIT implementations:
 
 | Tool | What to Learn |
 |------|---------------|
-| **LuaJIT** | Fast JIT |
-| **GraalVM** | Truffle JIT |
-| **V8** | JavaScript JIT |
+| **LuaJIT** | Trace compiler design, very fast interpreter |
+| **GraalVM/Truffle** | Language-agnostic JIT via partial evaluation |
+| **V8** | Tiered compilation, speculative optimization |
+| **HotSpot JVM** | Production server JIT with C1/C2 tiers |
 
 ## Research Frontiers
 

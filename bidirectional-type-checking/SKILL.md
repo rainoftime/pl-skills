@@ -5,10 +5,30 @@ version: "1.0.0"
 tags: [type-checking, type-inference, programming-languages, elaboration]
 difficulty: advanced
 languages: [haskell, ocaml]
-dependencies: [type-inference, simply-typed-lambda-calculus]
+dependencies: [type-inference-engine, simply-typed-lambda-calculus]
 ---
 
 # Bidirectional Type Checking
+
+## When to Use
+
+- Implementing type checkers with better local error messages
+- Supporting higher-rank or dependent-style annotations
+- Separating synthesis and checking modes in a formal spec
+
+## What This Skill Does
+
+1. Defines bidirectional typing judgments (`=>` and `<=`)
+2. Implements mode-directed checking and synthesis
+3. Supports elaboration from surface syntax to typed core
+4. Provides structured failure modes for type errors
+
+## How to Use
+
+1. Specify syntax classes that synthesize vs check
+2. Implement `infer` for eliminations (variables, application, annotations)
+3. Implement `check` for introductions (lambda, pairs, literals as needed)
+4. Add conversion/subtyping checks at mode boundaries
 
 ## Role Definition
 
@@ -34,10 +54,10 @@ Checking (verify):       Γ ⊢ e ⇐ A
 Variables:
   Γ ⊢ x ⇒ Γ(x)
 
-Lambdas (checking → inference):
+Lambdas (checking):
   Γ, x:A ⊢ e ⇐ B
   -------------------------
-  Γ ⊢ λx.e ⇒ A → B
+  Γ ⊢ λx.e ⇐ A → B
 
 Application (inference → checking):
   Γ ⊢ e₁ ⇒ A → B    Γ ⊢ e₂ ⇐ A
@@ -49,7 +69,7 @@ Application (inference → checking):
 
 | Pattern | Input | Strategy |
 |---------|-------|----------|
-| `λx.e` | Unknown type | Check body, infer λ type |
+| `λx.e` | Unknown type | Usually requires annotation/context; otherwise cannot synthesize |
 | `e₁ e₂` | Unknown type | Infer e₁, check e₂ |
 | `e : T` | Known type | Check e against T |
 | Literals | Unknown | Synthesize from literal |
@@ -153,6 +173,15 @@ For bidirectional typing tasks, provide:
 4. **Error messages**: Sample error outputs
 5. **Elaboration**: Output with inferred types
 
+## Canonical References
+
+| Reference | Why It Matters |
+|-----------|----------------|
+| **Pierce & Turner, "Local Type Inference" (POPL 1998)** | Foundation of bidirectional typing |
+| **Dunfield & Krishnaswami, "Complete and Easy Bidirectional Typechecking for Higher-Rank Polymorphism" (ICFP 2013)** | The definitive modern treatment |
+| **Harper & Lillibridge, "Explicit Polymorphism" (POPL 1994)** | Explicit polymorphism with bidirectional ideas |
+| **Dunfield & Krishnaswami, "Bidirectional Typing" (2020, ACM Computing Surveys)** | Comprehensive survey of bidirectional typing |
+
 ## Research Tools & Artifacts
 
 Bidirectional type checking in real systems:
@@ -168,7 +197,7 @@ Bidirectional type checking in real systems:
 
 ### Papers with Implementations
 
-- **"Complete and Easy Bidirectional Type Checking"** (Pfenning & Davies) - The definitive paper
+- **"Complete and Easy Bidirectional Typechecking for Higher-Rank Polymorphism"** (Dunfield & Krishnaswami, ICFP 2013) - The definitive paper
 - **"Reconstructing Type Inference"** (Dunfield & Krishnaswami) - Modern treatment
 - **"Bidirectional Typing for the Lambda Calculus"** - Various mechanizations
 

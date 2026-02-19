@@ -48,9 +48,14 @@ A skill for using Lean 4, a modern interactive theorem prover with powerful type
 - Language meta-theory
 - Mechanized proofs
 
-## References
+## Canonical References
 
-See: `../coq-proof-assistant` (comparison), `../dependent-type-implementer`
+| Reference | Why It Matters |
+|-----------|----------------|
+| **Avigad, Massot, "Mathematics in Lean"** | Official Lean tutorial |
+| **Carneiro, "The Type Theory of Lean" (2019)** | Lean's type theory foundation |
+| **mathlib documentation** | Mathematical library examples |
+| **Lean 4 manual** | Language reference |
 
 ## Research Tools & Artifacts
 
@@ -60,14 +65,25 @@ Lean ecosystem:
 |------|---------------|
 | **mathlib** | Mathematics library |
 | **Lean 4** | Implementation |
+| **Lean 3** | Previous version |
+| **Verso** | Documentation tool |
 
 ## Research Frontiers
 
 ### 1. Metaprogramming
-- **Goal**: Custom automation
+- **Goal**: Custom automation and tactics
+- **Approach**: Lean 4 metaprogramming API
+- **Papers**: "Metaprogramming in Lean 4" (2020)
+
+### 2. Automation
+- **Goal**: More powerful proof automation
+- **Approach**: AI-assisted proving, auto-params
+- **Papers**: "ProofNet" experiments
 
 ## Implementation Pitfalls
 
 | Pitfall | Real Consequence | Solution |
 |---------|-----------------|----------|
-| **Proof complexity** | Large proofs | Structure |
+| **Proof complexity** | Large proofs | Structure with lemmas |
+| **Universe issues** | Universe level errors | Explicit universe annotations |
+| **Definitional vs propositional** | Wrong equality type | Use appropriate eq |

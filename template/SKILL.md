@@ -118,7 +118,7 @@ python run.py --strategy cbv --file example.lc
 
 ## Related Skills
 
-- `skill-name` - Brief description
+- `simply-typed-lambda-calculus` - Example of a completed skill using this template style
 
 ## Canonical References
 

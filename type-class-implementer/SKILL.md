@@ -59,16 +59,16 @@ Type classes provide a structured way to add ad-hoc polymorphism to a language, 
 
 - `type-inference-engine` - Hindley-Milner with type classes
 - `system-f` - Alternative polymorphism mechanism
-- `trait-system` - Rust's approach to type classes
+- `ownership-type-system` - Rust-inspired typing constraints
 - `module-system` - ML modules as alternative
 
 ## Canonical References
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| Wadler, Blott "How to make ad-hoc polymorphism less ad hoc" (1989) | Original type classes paper |
-| Jones "Type classes with functional dependencies" | Multi-parameter type classes |
-| GHC User's Guide "Type classes" | Practical implementation |
+| **Wadler & Blott, "How to Make Ad-Hoc Polymorphism Less Ad-Hoc" (POPL 1989)** | Original type classes paper |
+| **Jones, "Type Classes with Functional Dependencies" (JFP 2000)** | Multi-parameter type classes |
+| **GHC User's Guide: "Type Classes"** | Practical implementation |
 
 ## Tradeoffs and Limitations
 

@@ -63,11 +63,11 @@ Verifies heap-manipulating programs using separation logic.
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| **Reynolds, "Separation Logic: A Logic for Shared Mutable Data Structures"** | Foundational SL paper |
-| **Ishtiaq & O'Hearn, "BI as an Assertion Language for Mutable Data Structures"** | Original SL paper |
-| **O'Hearn, "Resources, Concurrency, and Local Reasoning"** | Concurrent separation logic |
-| **Calcagno, O'Hearn & Yang, "Local Reasoning about a Copying Garbage Collector"** | SL for GC |
-| **Birkedal et al., "Iris: Monoids and Invariants"** | Modern separation logic framework |
+| **Reynolds, "Separation Logic: A Logic for Shared Mutable Data Structures" (LICS 2002)** | Foundational SL paper |
+| **Ishtiaq & O'Hearn, "BI as an Assertion Language for Mutable Data Structures" (POPL 2001)** | Original SL paper |
+| **O'Hearn, "Resources, Concurrency, and Local Reasoning" (2004)** | Concurrent separation logic |
+| **Calcagno, O'Hearn & Yang, "Local Reasoning about a Copying Garbage Collector" (POPL 2004)** | SL for GC |
+| **Birkedal et al., "Iris: Monoids and Invariants" (J. Formalized Reasoning 2016)** | Modern separation logic framework |
 
 ## Tradeoffs and Limitations
 
@@ -121,17 +121,26 @@ Separation logic tools:
 
 ### 1. Concurrent Separation Logic
 - **Goal**: Verify concurrent programs
-- **Approach**: Concurrent views, invariants
-- **Papers**: "Resources, Concurrency, and Local Reasoning"
+- **Approach**: Concurrent views, invariants, ghost resources
+- **Papers**: O'Hearn "Resources, Concurrency, and Local Reasoning" (2007)
+- **Tools**: Iris, FCSL
 
 ### 2. Bi-Abduction
 - **Goal**: Automatic frame inference
-- **Approach**: Abductive reasoning
-- **Tools**: Infer
+- **Approach**: Abductive reasoning for heap shapes
+- **Papers**: Calcagno et al. "Compositional Shape Analysis" (2009)
+- **Tools**: Infer (Facebook/Meta)
+
+### 3. Iris
+- **Goal**: Higher-order concurrent separation logic
+- **Approach**: Step-indexed model, ghost state
+- **Papers**: Jung et al. "Iris from the Ground Up" (2018)
 
 ## Implementation Pitfalls
 
 | Pitfall | Real Consequence | Solution |
 |---------|-----------------|----------|
-| **Wrong framing** | Incomplete proofs | Use frame rule |
-| **Entailment** | Undecidability | Approximate |
+| **Wrong framing** | Incomplete proofs | Use frame rule systematically |
+| **Entailment undecidability** | Non-termination | Use approximations/heuristics |
+| **Complex predicates** | Unreadable specs | Use abstraction layers |
+| **Variable capture** | Wrong heap access | Use explicit names |

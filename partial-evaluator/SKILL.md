@@ -137,11 +137,12 @@ For each PE task, provide:
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| **Jones, Gomard & Sestoft, "Partial Evaluation and Automatic Program Generation"** | Definitive textbook on PE |
-| **Futamura, "Partial Evaluation of Computation Process"** | Original PE papers; compiler generation |
-| **Consel & Danvy, "Tutorial on Univariate Binding-Time Analysis"** | BTA techniques |
-| **Holm & Palsberg, "Closure Conversion of Simply-Typed Lambda Calculus"** | Function specialization |
-| **Bolingbroke & Peyton Jones, "Supercompilation by Evaluation"** | Modern supercompilation |
+| **Jones, Gomard & Sestoft, "Partial Evaluation and Automatic Program Generation" (Prentice Hall, 1993)** | Definitive textbook on PE |
+| **Futamura, "Partial Evaluation of Computation Process" (1971, republished Higher-Order and Symbolic Computation 1999)** | Futamura projections; compiler generation from interpreters |
+| **Consel & Danvy, "Tutorial Notes on Partial Evaluation" (1998)** | Comprehensive introduction to PE techniques |
+| **Danvy, "Type-Directed Partial Evaluation" (1998)** | Normalization-based approach to PE |
+| **Minamide, Morrisett & Harper, "Typed Closure Conversion" (POPL 1996)** | Type-preserving closure conversion |
+| **Bolingbroke & Peyton Jones, "Supercompilation by Evaluation" (Haskell Symposium 2010)** | Modern supercompilation for Haskell |
 
 ## Tradeoffs and Limitations
 

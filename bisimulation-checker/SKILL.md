@@ -259,6 +259,15 @@ class EfficientBisim:
 | **Branching bisim** | Preserve branching structure |
 | **Observation equivalence** | Delay-insensitive |
 
+## Canonical References
+
+| Reference | Why It Matters |
+|-----------|----------------|
+| **Milner, "Communication and Concurrency"** | Foundational bisimulation treatment |
+| **Park, "Concurrency and Automata on Infinite Sequences"** | Original bisimulation paper |
+| **Sangiorgi, "On the Origins of Bisimulation and Coinduction"** | Historical perspective |
+| **Aczel, "Non-Well-Founded Sets"** | Coinductive foundations |
+
 ## Tips
 
 - Use partition refinement

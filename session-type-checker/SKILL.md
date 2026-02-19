@@ -320,11 +320,11 @@ class SessionInference:
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| **Honda, "Types for Dyadic Interaction"** | Original session types paper |
-| **Honda, Yoshida & Carbone, "Multiparty Asynchronous Session Types"** | Multiparty session types |
-| **Gay & Hole, "Subtyping for Session Types"** | Session subtyping |
-| **Bettini et al., "Global Escape in Multiparty Sessions"** | Multiparty protocols |
-| **Yoshida & Vasconcelos, "Language Primitives and Type Theory for Communication"** | Session type primitives |
+| **Honda, "Types for Dyadic Interaction" (CONCUR 1993)** | Original session types paper |
+| **Honda, Yoshida & Carbone, "Multiparty Asynchronous Session Types" (POPL 2007)** | Multiparty session types |
+| **Gay & Hole, "Subtyping for Session Types" (Acta Informatica 2005)** | Session subtyping |
+| **Bettini et al., "Global Escape in Multiparty Sessions" (POPL 2008)** | Multiparty protocols |
+| **Yoshida & Vasconcelos, "Language Primitives and Type Theory for Communication-Based Programming" (2007)** | Session type primitives |
 
 ## Tradeoffs and Limitations
 

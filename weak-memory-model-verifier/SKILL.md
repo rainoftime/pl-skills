@@ -425,13 +425,16 @@ Memory model tools:
 
 | Tool | What to Learn |
 |------|---------------|
-| **CBMC** | Bounded verification |
-| **CPG** | Cat |
+| **CBMC** | Bounded model checking for C/C++ |
+| **CDSChecker** | C/C++11 memory model checker |
+| **herd** | Memory model simulator |
+| **Alglave's tools** | Memory model testing |
 
 ## Research Frontiers
 
 ### 1. Formal Verification
 - **Goal**: Prove memory model correctness
+- **Key Work**: Alglave et al. on memory model semantics
 
 ## Implementation Pitfalls
 

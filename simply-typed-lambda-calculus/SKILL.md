@@ -35,6 +35,13 @@ Implements the simply-typed lambda calculus (STLC) with extensions.
 3. **Adds sums** - Tagged unions
 4. **Proves soundness** - Progress + preservation
 
+## How to Use
+
+1. Define syntax for types and terms
+2. Implement typing judgment `Γ ⊢ e : τ`
+3. Implement small-step evaluation
+4. Prove progress and preservation for each reduction rule
+
 ## Key Concepts
 
 | Concept | Description |
@@ -61,11 +68,20 @@ Implements the simply-typed lambda calculus (STLC) with extensions.
 - Prove soundness incrementally
 - Use de Bruijn indices for binding
 
+## Canonical References
+
+| Reference | Why It Matters |
+|-----------|----------------|
+| **Barendregt, "The Lambda Calculus"** | Definitive reference on λ-calculus variants |
+| **Pierce, "Types and Programming Languages", Ch. 5-9** | STLC with products, sums, recursive types |
+| **Girard, Lafont, Taylor, "Proofs and Types"** | System F and type theory foundations |
+| **Mitchell, "Foundations for Programming Languages"** | Comprehensive type systems coverage |
+
 ## Related Skills
 
 - `lambda-calculus-interpreter` - Untyped lambda calculus
 - `type-checker-generator` - Type checkers
-- `dependent-type-implementer` - Polymorphic lambda calculus
+- `dependent-type-implementer` - Dependent type theory
 
 ## Research Tools & Artifacts
 
@@ -75,7 +91,7 @@ Formalizations of STLC in proof assistants:
 |---------------|-----------------|---------------|
 | **TAPL in Coq** | Coq | Full soundness proofs |
 | **Software Foundations** | Coq | Pedagogical development |
-- **Homotopy Type Theory** | Agda | Higher inductive types |
+| **Homotopy Type Theory** | Agda | Higher inductive types |
 | **PFPL** | Coq | Pierce's formalization |
 
 ### Key Implementations
@@ -89,12 +105,12 @@ Formalizations of STLC in proof assistants:
 ### 1. Normalization
 - **Goal**: Prove that evaluation always terminates
 - **Technique**: Logical relations, reducibility candidates
-- **Papers**: "Normalization for the Simply Typed Lambda Calculus" (Girard et al.)
+- **Papers**: Girard, Lafont & Taylor "Proofs and Types" (Chapter 4-6); Tait's method
 - **Application**: Proof assistants, termination checking
 
 ### 2. Characterization of Terms
 - **Goal**: What functions are definable in STLC?
-- **Key result**: Only computable functions (Turing completeness)
+- **Key result**: STLC terms are strongly normalizing (not Turing complete without recursion/fixpoint)
 - **Paper**: "The Church-Rosser Property" (Curry & Feys)
 - **Technique**: Reducibility candidates
 

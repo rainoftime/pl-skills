@@ -65,9 +65,10 @@ Loop optimizations transform loops to improve performance by reducing overhead, 
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| Lam, Rothberg, Wolf "The cache performance and optimizations of blocked algorithms" | Classic tiling paper |
-| Allen, Kennedy "Optimizing Compilers for Modern Architectures" | Comprehensive loop optimization |
-| Polyhedral model papers | Mathematical loop transformation framework |
+| **Lam, Rothberg & Wolf, "The Cache Performance and Optimizations of Blocked Algorithms" (PLDI 1991)** | Classic paper on tiling for cache locality |
+| **Wolf & Lam, "A Data Locality Optimizing Algorithm" (PLDI 1991)** | Unified loop transformation framework |
+| **Allen & Kennedy, "Optimizing Compilers for Modern Architectures: A Dependence-based Approach" (Morgan Kaufmann, 2001)** | Comprehensive textbook on loop optimization |
+| **Feautrier, "Dataflow Analysis of Array and Scalar References" (IJPP 1991)** | Polyhedral model foundations |
 
 ## Tradeoffs and Limitations
 

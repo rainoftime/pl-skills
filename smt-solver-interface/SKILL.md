@@ -65,9 +65,9 @@ SMT (Satisfiability Modulo Theories) solvers combine SAT solving with decision p
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| De Moura, Bjørner "Z3: An efficient SMT solver" | Z3 paper |
-| Barrett, Tinelli "Satisfiability Modulo Theories" | SMT overview |
-| Kroening, Strichman "Decision Procedures" | Comprehensive book |
+| **De Moura & Bjørner, "Z3: An Efficient SMT Solver" (TACAS 2008)** | Z3 paper |
+| **Barrett & Tinelli, "Satisfiability Modulo Theories" (Handbook of Model Checking 2014)** | SMT overview |
+| **Kroening & Strichman, "Decision Procedures: An Algorithmic Point of View" (Springer, 2016)** | Comprehensive book |
 
 ## Tradeoffs and Limitations
 

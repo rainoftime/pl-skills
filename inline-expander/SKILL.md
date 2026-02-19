@@ -65,9 +65,9 @@ Function inlining replaces a function call with the body of the called function,
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| Aycock "A brief history of just-in-time" | Context for inlining importance |
-| LLVM Inline Cost Analysis | Production heuristics |
-| GCC Inlining Parameters | Tuning guidelines |
+| **Aycock, "A Brief History of Just-in-Time Compilation" (2010)** | Context for inlining importance |
+| **LLVM Inline Cost Analysis** | Production heuristics |
+| **GCC Inlining Parameters** | Tuning guidelines |
 
 ## Tradeoffs and Limitations
 

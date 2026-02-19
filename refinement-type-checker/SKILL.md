@@ -214,8 +214,8 @@ class RefinementEncoder:
         return z3.ForAll(
             [x],
             z3.Implies(
-                self.substitute(rtype.sub.predicate, x),
-                self.substitute(rtype.sup.predicate, x)
+                self.substitute(sub.predicate, x),
+                self.substitute(sup.predicate, x)
             )
         )
 ```
@@ -262,11 +262,10 @@ Liquid Type Inference:
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| **Freeman & Pfenning, "Refinement Types for ML"** | Original refinement types |
-| **Rondon et al., "Liquid Types"** | Liquid types paper |
-| **Pfenning, "Introduction to Refinement Types"** | Survey |
-| **Vazou et al., "Liquid Haskell"** | Refinement types in Haskell |
-| **Xi & Pfenning, "Dependent Types"** | DML paper |
+| **Freeman & Pfenning, "Refinement Types for ML" (PLDI 1991)** | Original refinement types paper |
+| **Rondon, Kawaguchi & Jhala, "Liquid Types" (PLDI 2008)** | Liquid types with SMT inference |
+| **Xi & Pfenning, "Dependent Types in Practical Programming" (PLDI 1999)** | DML: Dependent ML |
+| **Vazou et al., "Liquid Haskell: Haskell as a Theorem Prover" (Haskell 2014)** | Refinement types in Haskell |
 
 ## Tradeoffs and Limitations
 

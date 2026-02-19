@@ -35,6 +35,13 @@ Implements dependent type theory (Type Theory, Π Types, Σ Types).
 3. **Type checking** - With conversion and unification
 4. **Proof elaboration** - From surface to core syntax
 
+## How to Use
+
+1. Start from a minimal core (`Var`, `Pi`, `Lam`, `App`, universes)
+2. Implement normalization and definitional equality
+3. Type-check by synthesis/checking with conversion
+4. Add `Sigma`, naturals, and eliminators incrementally
+
 ## Core Theory
 
 ```
@@ -60,103 +67,54 @@ Type formation rules:
 
 ## Implementation
 
-```coq
-(* Coq Implementation *)
+```
+(* Core Syntax (conceptual) *)
 
-(* Core Syntax *)
-Inductive term : Type :=
-  | tVar : nat -> term
-  | tAbs : term -> term
-  | tApp : term -> term -> term
-  | tPi : term -> term -> term  (* Dependent function *)
-  | tSigma : term -> term -> term  (* Dependent pair *)
-  | tPair : term -> term -> term
-  | tProj1 : term -> term
-  | tProj2 : term -> term
-  | tStar : term  (* Unit *)
-  | tNat : term
-  | tZero : term
-  | tSucc : term -> term
-  | tNatElim : term -> term -> term -> term.
+Term types:
+  - Type (universe)
+  - Var (de Bruijn index)
+  - Lam (abstraction with optional type annotation)
+  - App (application)
+  - Pi (dependent function type)
+  - Sigma (dependent pair type)
+  - Pair, Proj1, Proj2 (pair intro/elim)
+  - Unit, Nat, Zero, Succ, NatElim (basic types)
 
-(* Context: list of (name * term * type) *)
-Definition context := list (nat * term * term).
+Type formation rules:
+  Γ ⊢ A : s    Γ, x:A ⊢ B : s
+  ------------------------------
+  Γ ⊢ Π(x:A).B : s
 
-(* Type Checking *)
-Inductive has_type (Γ : context) : term -> term -> Prop :=
-  | T_Var : ∀ x A,
-      In (x, A) Γ ->
-      has_type Γ (tVar x) A
-  | T_Pi : ∀ A B s1 s2,
-      has_type Γ A s1 ->
-      has_type (Γ ++ [(0, A)]) B s2 ->
-      has_type Γ (tPi A B) s2
-  | T_Abs : ∀ A B M N s1 s2,
-      has_type Γ A s1 ->
-      has_type (Γ ++ [(0, A)]) N B ->
-      has_type Γ (tAbs (A, N)) (tPi A B)
-  | T_App : ∀ M N A B,
-      has_type Γ M (tPi A B) ->
-      has_type Γ N A ->
-      has_type Γ (tApp M N) (B.[0 := N])
-  | T_Sigma : ∀ A B s1 s2,
-      has_type Γ A s1 ->
-      has_type (Γ ++ [(0, A)]) B s2 ->
-      has_type Γ (tSigma A B) s2
-  | T_Pair : ∀ A B M N,
-      has_type Γ M A ->
-      has_type Γ N B.[0 := M] ->
-      has_type Γ (tPair M N) (tSigma A B)
-  | T_Proj1 : ∀ P M A B,
-      has_type Γ M (tSigma A B) ->
-      has_type Γ (tProj1 M) A
-  | T_Proj2 : ∀ P M A B,
-      has_type Γ M (tSigma A B) ->
-      has_type Γ (tProj2 M) B.[0 := tProj1 M]
-  | T_Nat : has_type Γ tNat Type
-  | T_Zero : has_type Γ tZero tNat
-  | T_Succ : ∀ n,
-      has_type Γ n tNat ->
-      has_type Γ (tSucc n) tNat
-  | T_NatElim : ∀ P m z s,
-      has_type Γ P (tPi tNat Type) ->
-      has_type Γ z P.[0 := tZero] ->
-      has_type Γ s (tPi tNat (tPi P (tPi (tSucc (tVar 0)) P))) ->
-      has_type Γ (tNatElim P m z s) (tPi tNat P).
+  Γ ⊢ A : s    Γ, x:A ⊢ B : s
+  ------------------------------
+  Γ ⊢ Σ(x:A).B : s
 
-(* Reduction (β) *)
-Inductive red : term -> term -> Prop :=
-  | R_AppAbs : ∀ M N,
-      red (tApp (tAbs M) N) M.[0 := N]
-  | R_Proj1 : ∀ M N,
-      red (tProj1 (tPair M N)) M
-  | R_Proj2 : ∀ M N,
-      red (tProj2 (tPair M N)) N
-  | R_NatElimSucc : ∀ P m z s n,
-      red (tNatElim P (tSucc n) z s) 
-          (tApp (tApp (tApp s n) (tNatElim P n z s)) z).
+Typing rules (key cases):
+  T_Abs:  Γ ⊢ A : s
+          Γ, x:A ⊢ N : B
+          ----------------
+          Γ ⊢ λx:A. N : Π(x:A).B
 
-(* Progress Lemma *)
-Lemma progress : ∀ M T,
-  has_type [] M T ->
-  value M \/ ∃ M', red M M'.
+  T_App:  Γ ⊢ M : Π(x:A).B
+          Γ ⊢ N : A
+          -----------------
+          Γ ⊢ M N : B[x := N]
 
-(* Preservation Lemma *)  
-Lemma preservation : ∀ M M' T,
-  has_type [] M T ->
-  red M M' ->
-  has_type [] M' T.
+  T_Pair: Γ ⊢ M : A
+          Γ ⊢ N : B[x := M]
+          ------------------
+          Γ ⊢ (M, N) : Σ(x:A).B
 ```
 
 ## Elaboration
 
-```coq
-(* From surface syntax to core *)
+```
+From surface syntax to core:
 
-(* Surface: λ(x : A) => e *)
-(* Core: tAbs A e *)
+Surface: λ(x : A) => e
+Core:    Lam A e
 
-Elabulation algorithm:
+Elaboration algorithm:
 1. Infer type of binding: A : s
 2. Extend context with x : A
 3. Elaborate body: e : B
@@ -164,14 +122,14 @@ Elabulation algorithm:
    - Non-dependent: Pi A (λx. B)
    - Dependent: Pi A (λx. B)
 
-(* Pattern matching elaboration *)
-Elab match e return P with
-| c1 => e1
-| c2 => e2
-end
+Pattern matching elaboration:
+  match e return P with
+  | c1 => e1
+  | c2 => e2
+  end
 
-becomes:
-NatElim P e (λ_. e1) (λn. λIH. e2)
+  becomes:
+  NatElim P e (λ_. e1) (λn. λIH. e2)
 ```
 
 ## Universe Polymorphism
@@ -263,7 +221,7 @@ let rec eval (t : term) (ρ : value list) : value =
 
 ## Related Skills
 
-- `dependent-type-implementer` - CoC
+- `system-f` - Polymorphic lambda calculus
 - `type-inference-engine` - HM inference
 - `coq-proof-assistant` - Coq proofs
 
@@ -272,10 +230,10 @@ let rec eval (t : term) (ρ : value list) : value =
 | Reference | Why It Matters |
 |-----------|----------------|
 | **Coq Reference Manual** | Definitive implementation reference |
-| **Martin-Löf, "Intuitionistic Type Theory"** | Original dependent type theory |
-| **Harper & Pfenning, "On Equivalence and Canonical Forms"** | Conversion checking |
-| **Abel et al., "Normalization for Dependent Types"** | Normalization by evaluation |
-| **Chapman et al., "Elaborating Dependent Types"** | Elaboration to core language |
+| **Martin-Löf, "Intuitionistic Type Theory" (1984)** | Original dependent type theory |
+| **Harper & Pfenning, "On Equivalence and Canonical Forms in the LF Type Theory" (2005)** | Type-directed conversion checking |
+| **Abel, Coquand & Dybjer, "Normalization by Evaluation for Martin-Löf Type Theory" (2007)** | NbE for dependent types |
+| **Chapman, Altenkirch & McBride, "Epigram Reloaded: A Standalone Typechecker for ETT" (2006)** | Elaboration implementation |
 
 ## Tradeoffs and Limitations
 

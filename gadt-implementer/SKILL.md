@@ -5,7 +5,7 @@ version: "1.0.0"
 tags: [type-theory, data-structures, haskell, pldi]
 difficulty: advanced
 languages: [haskell, ocaml, rust]
-dependencies: [type-checker-generator, algebraic-data-types]
+dependencies: [type-checker-generator, simply-typed-lambda-calculus]
 ---
 
 # GADT Implementer
@@ -65,8 +65,8 @@ Generalized Algebraic Data Types (GADTs) extend ordinary algebraic data types by
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| Xi, Chen "GADTs" (2003) | Original paper introducing GADTs |
-| Peyton Jones et al. "Simple unification-based type inference for GADTs" | Type inference algorithm |
+| **Xi, Chen & Chen, "Guarded Recursive Datatype Constructors" (POPL 2003)** | Original paper introducing GADTs in ML/Haskell |
+| **Peyton Jones, Vytiniotis, Weirich & Shields, "Practical Type Inference for Arbitrary-Rank Types" (JFP 2007)** | Type inference for GADTs and rank-N polymorphism |
 | GHC User's Guide "GADTs" | Practical implementation details |
 
 ## Tradeoffs and Limitations

@@ -206,9 +206,9 @@ class AliasAnalysis:
 
 ## Andersen's Analysis
 
- AndersensAnalysis(AliasAnalysis):
-    """Andersen's inclusion-based analysis (O(n³))```python
-class"""
+```python
+class AndersensAnalysis(AliasAnalysis):
+    """Andersen's inclusion-based analysis (O(n³))"""
     
     def analyze(self, program: 'Program') -> Dict:
         """Andersen-style analysis"""
@@ -388,12 +388,11 @@ class SteensgaardAnalysis(AliasAnalysis):
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| **Andersen, "Program Analysis and Specialization for the C Programming Language"** | Andersen's inclusion-based analysis |
-| **Steensgaard, "Points-to Analysis in Almost Linear Time"** | Unification-based analysis |
-| **Hindley, "The Principal Type-Scheme of an Object in Combinatory Logic"** | Type-theoretic foundation |
-| **Landi, "Undecidability of Static Analysis"** | Theoretical limits |
-| **Emami et al., "Context-Sensitive Pointer Analysis"** | Context-sensitive variants |
-| **Hardekopf, Lin "The ant and the grasshopper"** | Fast points-to analysis |
+| **Andersen, "Program Analysis and Specialization for the C Programming Language" (PhD thesis, 1994)** | Andersen's inclusion-based analysis |
+| **Steensgaard, "Points-to Analysis in Almost Linear Time" (POPL 1996)** | Unification-based analysis |
+| **Emami et al., "Context-Sensitive Pointer Analysis" (PLDI 1994)** | Context-sensitive variants |
+| **Landi, "Undecidability of Static Analysis" (1992)** | Theoretical limits |
+| **Hardekopf & Lin, "The Ant and the Grasshopper" (PLDI 2007)** | Fast points-to analysis |
 
 ## Tradeoffs and Limitations
 

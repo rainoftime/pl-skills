@@ -65,17 +65,16 @@ Implements tracing garbage collectors (mark-compact, generational, etc.).
 
 - `jit-compiler-builder` - Build VM runtime
 - `lambda-calculus-interpreter` - Bytecode interpreter
-- `garbage-collector-implementer` - Memory layout
 
 ## Canonical References
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| **Jones & Lins, "Garbage Collection: Algorithms for Automatic Dynamic Memory Management"** | Definitive textbook on GC |
-| **Jones, "Garbage Collection" (Chapman & Hall)** | Comprehensive survey |
-| **Lieberman & Hewitt, "A Real-Time Garbage Collector Based on the Lifetimes of Objects"** | Generational GC origin |
-| **Ungar, "Generation Scavenging"** | Nursery/tenured generations |
-| **Blackburn et al., "The Immix Garbage Collector"** | Modern high-throughput collector |
+| **Jones & Lins, "Garbage Collection: Algorithms for Automatic Dynamic Memory Management" (Wiley, 1996)** | Definitive textbook on GC |
+| **Jones, Hosking & Moss, "The Garbage Collection Handbook: The Art of Automatic Memory Management" (Chapman & Hall, 2012)** | Updated comprehensive reference |
+| **Lieberman & Hewitt, "A Real-Time Garbage Collector Based on the Lifetimes of Objects" (CACM 1983)** | Generational GC origin |
+| **Ungar, "Generation Scavenging: A Non-disruptive High Performance Storage Reclamation Algorithm" (1984)** | Nursery/tenured generations |
+| **Blackburn & McKinley, "Immix: A Mark-Region Garbage Collector with Space Efficiency, Fast Collection, and Mutator Performance" (PLDI 2008)** | Modern high-throughput collector |
 
 ## Tradeoffs and Limitations
 

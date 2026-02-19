@@ -66,9 +66,9 @@ Dafny is a verification-aware programming language that supports writing specifi
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| Leino "Dafny: An Automatic Program Verifier" | Original Dafny paper |
-| Leino "Program Proofs" | Comprehensive Dafny book |
-| Dafny documentation | Official reference |
+| **Leino, "Dafny: An Automatic Program Verifier for Functional Correctness" (LPAR 2010)** | Original Dafny paper |
+| **Leino, "Program Proofs" (MIT Press, 2023)** | Comprehensive Dafny book |
+| **Dafny documentation (dafny.org)** | Official reference |
 
 ## Tradeoffs and Limitations
 

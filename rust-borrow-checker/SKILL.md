@@ -73,10 +73,10 @@ Implements Rust-style ownership, borrowing, and lifetime verification.
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| **Matsakis & Klock, "The Rust Language" (2014)** | Rust ownership design |
-| **Rust Reference - Lifetimes** | Official lifetime specification |
-| **Niko Matsakis's Blog** | Deep dives on borrow checker |
-| **oxide-rust/borrow-checker** | Reference implementation |
+| **Matsakis & Klock, "The Rust Language: Memory Model and Lifetime System" (2014)** | Original Rust ownership and borrowing design |
+| **Rust Reference, Chapter 4: "Lifetimes and Borrowing"** | Official lifetime and borrow specification |
+| **N. Matsakis, "A Primer on Rust Lifetimes" (blog series, 2014-2016)** | Deep dives on borrow checker design decisions |
+| **N. Matsakis & R. Klock, "The Rust Borrow Checker" (Rust Belt Rust 2016)** | Overview of borrow checker implementation |
 
 ## Tradeoffs and Limitations
 
@@ -115,10 +115,25 @@ Rust borrow checker implementations:
 
 ### 1. Polonius
 - **Goal**: More precise borrow checking
-- **Approach**: Move errors as dataflow
+- **Approach**: Move errors as dataflow facts
+- **Papers**: "Polonius: A New Borrow Checker" (Jung et al., 2018)
+- **Status**: Experimental in rustc
+
+### 2. Async/await and Lifetimes
+- **Goal**: Better lifetime handling in async code
+- **Approach**: Extended lifetime rules for generators
+- **Papers**: "Rust RFC 2394: async/await"
+
+### 3. Formal Verification of Rust
+- **Goal**: Prove memory safety formally
+- **Approach**: RustBelt, semantic type system
+- **Papers**: Jung et al. "RustBelt: Securing Rust" (POPL 2018)
 
 ## Implementation Pitfalls
 
 | Pitfall | Real Consequence | Solution |
 |---------|-----------------|----------|
-| **NLL complexity** | Wrong errors | Careful algorithm |
+| **NLL complexity** | Wrong error messages | Careful dataflow algorithm |
+| **Lifetime inference** | Overly conservative | Better region inference |
+| **Async interactions** | Rejected valid code | Extend lifetime rules |
+| **Unsafe escape hatch** | Lost guarantees | Clear unsafe boundaries |

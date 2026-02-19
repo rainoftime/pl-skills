@@ -65,9 +65,9 @@ Axiomatic semantics defines program meaning through logical assertions about pro
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| Hoare "An axiomatic basis for computer programming" (1969) | Original Hoare logic |
-| Dijkstra "A Discipline of Programming" | Weakest preconditions |
-| Winskel "The Formal Semantics of Programming Languages" | Comprehensive treatment |
+| **Hoare, "An Axiomatic Basis for Computer Programming" (CACM 1969)** | Original Hoare logic (Turing Award) |
+| **Dijkstra, "A Discipline of Programming" (1976)** | Weakest preconditions |
+| **Winskel, "The Formal Semantics of Programming Languages" (1993)** | Comprehensive treatment |
 
 ## Tradeoffs and Limitations
 

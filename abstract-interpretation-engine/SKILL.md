@@ -108,13 +108,11 @@ python examples/abstract_interpreter.py --domain interval --file program.cfg
 ## Core Theory
 
 ```
-Concrete domain:     C ⊆ P(Σ*)
+Concrete domain:     C ⊆ P(Σ)
 Abstract domain:     A with α: C → A, γ: A → C
 
-Soundness:          α(c) ⊑ a ⇒ c ⊆ γ(a)
-Correctness:         γ(α(c)) ⊇ c
-
-Galois connection:   α ∘ γ ≤ id ≤ γ ∘ α
+Soundness:           c ⊆ γ(α(c))
+Galois connection:   ∀c∈C, a∈A. α(c) ⊑ a ⇔ c ⊆ γ(a)
 ```
 
 ## Implementation
@@ -495,7 +493,7 @@ def widening_fixpoint(transition, initial, widening, max_iterations=1000):
 | **Cousot, "Theoretical Basis for Abstract Interpretation"** | Mathematical foundations |
 | **Nielson, Nielson & Hankin, "Principles of Program Analysis"** | Comprehensive textbook on static analysis |
 | **Graf & Saidi, "Construction of Abstract State Graphs"** | Predicate abstraction |
-| **Blazy & Leroy, "Abstract Interpretation" (chapter)** | Practical implementation guide |
+| **Blazy, Leroy, et al., "Formal Verification of a C Value Analysis Based on Abstract Interpretation" (SAS 2013)** | Verified abstract interpreter in Coq |
 
 ## Tradeoffs and Limitations
 

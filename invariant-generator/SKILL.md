@@ -67,11 +67,11 @@ Automatically infers loop invariants for program verification.
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| **Ernst et al., "The Daikon System for Dynamic Detection of Likely Invariants"** | Daikon invariant detector |
-| **Sankaranarayanan et al., "Invariant Inference"** | Template-based invariant generation |
-| **Csallner et al., "DynaMine"** | Dynamic invariant mining |
-| **Gulwani et al., "JUICE"** | Counterexample-guided invariant generation |
-| **Sharma & Aiken, "Invariant Synthesis"** | Interpolants-based invariant generation |
+| **Ernst et al., "The Daikon System for Dynamic Detection of Likely Invariants" (SCP 2007)** | Daikon invariant detector |
+| **Sankaranarayanan et al., "Non-Linear Loop Invariant Generation using Gröbner Bases" (POPL 2004)** | Template-based invariant generation |
+| **Csallner & Xie, "DynaMine: Finding Common Error Patterns by Mining Software Repositories" (ICSE 2005)** | Dynamic invariant mining |
+| **Gulwani et al., "Generating Numerical Invariants with Polynomials" (POPL 2009)** | Counterexample-guided invariant generation |
+| **Sharma & Aiken, "From Invariants to Code" (POPL 2014)** | Interpolants-based invariant generation |
 
 ## Tradeoffs and Limitations
 

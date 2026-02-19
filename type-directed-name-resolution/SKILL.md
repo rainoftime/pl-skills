@@ -5,7 +5,7 @@ version: "1.0.0"
 tags: [name-resolution, type-systems, overloading, scope-graphs]
 difficulty: intermediate
 languages: [haskell, scala, rust]
-dependencies: [type-inference]
+dependencies: [type-inference-engine]
 ---
 
 # Type-Directed Name Resolution (TDNR)
@@ -170,6 +170,15 @@ Your TDNR implementations must:
 - [ ] **Ambiguity detection**: Flag unresolved ambiguity
 - [ ] **Error messages**: Help resolve failures
 - [ ] **Performance**: Efficient lookup
+
+## Canonical References
+
+| Reference | Why It Matters |
+|-----------|----------------|
+| **Wadler & Blott, "How to Make Ad-Hoc Polymorphism Less Ad-Hoc" (POPL 1989)** | Type classes as principled overloading |
+| **Jones, "Typing Haskell in Haskell" (1999)** | Haskell type class implementation |
+| **Odersky et al., "Scala's Type Classes" (2005)** | Type class design in Scala |
+| **GHC User's Guide: Type Signatures** | Practical Haskell name resolution |
 
 ## Output Format
 

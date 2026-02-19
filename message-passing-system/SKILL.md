@@ -65,9 +65,9 @@ Message passing is a concurrency model where processes/actors communicate by sen
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| Hoare "Communicating Sequential Processes" | CSP foundation |
-| Hewitt et al. "Actor Model" | Original actor paper |
-| Go language channels | Practical implementation |
+| Hoare "Communicating Sequential Processes" (1978) | CSP foundation |
+| Hewitt, Bishop, Steiger "A Universal Modular ACTOR Formalism for Artificial Intelligence" (IJCAI 1973) | Original actor paper |
+| Pike "Newsqueak" and Go channels | Practical implementation |
 
 ## Tradeoffs and Limitations
 

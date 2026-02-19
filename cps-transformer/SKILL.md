@@ -115,11 +115,11 @@ Provide:
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| **Fischer & Plotkin, "An Axiomatic Basis for Programming Languages"** | Classical logic and CPS connection |
-| **Reynolds, "Theories of Programming Languages"** | Chapter on continuations |
-| **Queinnec, "Principles of Programming Languages"** | CPS and continuation-passing |
-| **Appel, "Compiling with Continuations"** | CPS in practice (compilers) |
-| **Danvy & Filinski, "Representing Control"** | Shift/reset delimited continuations |
+| **Griffin, "A Formulae-as-Types Notion of Control" (POPL 1990)** | Classical logic and CPS connection |
+| **Reynolds, "Theories of Programming Languages" (1998)** | Chapter on continuations |
+| **Queinnec, "Principles of Programming Languages" (2012)** | CPS and continuation-passing |
+| **Appel, "Compiling with Continuations" (1992)** | CPS in practice (compilers) |
+| **Danvy & Filinski, "Abstracting Control" (LFP 1990)** | Shift/reset delimited continuations |
 
 ## Tradeoffs and Limitations
 
@@ -160,7 +160,7 @@ Real-world CPS implementations:
 | **SML/NJ compiler** | Classical CPS-based compiler |
 | **GHC** | Optimizing Haskell compiler |
 | **Larceny** | Scheme implementation |
-| ** Chez Scheme** | Production Scheme with CPS |
+| **Chez Scheme** | Production Scheme with CPS |
 | **MLton** | Whole-program ML compiler |
 
 ### Key CPS Systems
@@ -183,6 +183,7 @@ Current CPS research:
 
 1. **Zero-call/cc**: Efficient delimited continuations
 2. **CPS for web**: Async/await via CPS
+3. **Defunctionalization**: CPS to first-order programs
 
 ## Implementation Pitfalls
 

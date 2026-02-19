@@ -66,9 +66,9 @@ Effect systems track what computational effects a function may perform, enabling
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| Lucassen, Gifford "Polymorphic Effect Systems" | Original paper |
-| Talpin, Jouvelot "The Type and Effect Discipline" | Effect polymorphism |
-| Koka language documentation | Modern effect system |
+| **Lucassen & Gifford, "Polymorphic Effect Systems" (POPL 1988)** | Original paper on effect systems |
+| **Talpin & Jouvelot, "The Type and Effect Discipline" (POPL 1992)** | Effect polymorphism formalization |
+| **Leijen, "Koka: Programming with Row Polymorphic Effect Handlers" (2017)** | Modern effect system design |
 
 ## Tradeoffs and Limitations
 

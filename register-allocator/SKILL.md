@@ -65,9 +65,9 @@ Register allocation maps an unlimited number of virtual registers (or temporarie
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| Chaitin "Register allocation & spilling via graph coloring" (1982) | Classic graph coloring algorithm |
-| Poletto, Sarkar "Linear scan register allocation" (1999) | Fast allocation for JITs |
-| Appel "Modern Compiler Implementation" Ch. 11 | Comprehensive treatment |
+| **Chaitin, "Register Allocation & Spilling via Graph Coloring" (PLDI 1982)** | Classic graph coloring algorithm |
+| **Poletto & Sarkar, "Linear Scan Register Allocation" (TOPLAS 1999)** | Fast allocation for JITs |
+| **Appel, "Modern Compiler Implementation in ML", Ch. 11 (1998)** | Comprehensive treatment |
 
 ## Tradeoffs and Limitations
 

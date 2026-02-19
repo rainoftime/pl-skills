@@ -66,9 +66,9 @@ Lock-free data structures allow multiple threads to access shared data without u
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| Herlihy, Shavit "The Art of Multiprocessor Programming" | Comprehensive treatment |
-| Michael, Scott "Simple, Fast, and Practical Non-Blocking Queue" | Classic queue algorithm |
-| Michael "Hazard Pointers" | Memory reclamation |
+| Herlihy & Shavit "The Art of Multiprocessor Programming" | Comprehensive treatment |
+| Michael & Scott "Simple, Fast, and Practical Non-Blocking and Blocking Concurrent Queue Algorithms" (PODC 1996) | Classic queue algorithm |
+| Michael "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects" (TPDS 2004) | Memory reclamation |
 
 ## Tradeoffs and Limitations
 

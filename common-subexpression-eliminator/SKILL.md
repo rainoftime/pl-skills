@@ -56,6 +56,15 @@ Implements common subexpression elimination optimization.
 - `common-subexpression-eliminator` - DCE
 - `ssa-constructor` - Register allocation
 
+## Canonical References
+
+| Reference | Why It Matters |
+|-----------|----------------|
+| **Cocke, "Global Common Subexpression Elimination" (1970)** | Original CSE algorithm |
+| **Tjaden & Flynt, "Global Subexpression Elimination" (1970s)** | Early CSE work |
+| **Rosen, "Global Value Numbers and Redundant Computations" (1988)** | Value numbering framework |
+| **Click & Cooper, "Combining Analyses, Optimizing and Using Them" (1995)** | Integration of CSE with other analyses |
+
 ## Research Tools & Artifacts
 
 Real-world CSE implementations to study:
@@ -80,11 +89,10 @@ Current CSE research:
 
 | Direction | Key Papers | Challenge |
 |-----------|------------|-----------|
-| **Value numbering** | "Global Value Numbering" (1999) | More powerful than CSE |
+| **Value numbering** | Rosen, Wegman & Zadeck, "Global Value Numbers and Redundant Computations" (POPL 1988) | More powerful than CSE |
 | **SCEV (Scalar Evolution)** | LLVM's SCEV analysis | Loop-carried dependencies |
-| **Partial redundancy** | "Partial Redundancy Elimination" (1992) | Redundancy across paths |
-| **Bit-level CSE** | "Bitwise CSE" (2011) | Non-overlapping bits |
-| **ML-based** | "Learning Optimizations" (2023) | Predicting profitability |
+| **Partial redundancy** | Morel & Renvoise, "Global Optimization by Suppression of Partial Redundancies" (CACM 1979) | Redundancy across paths |
+| **Lazy code motion** | Knoop, Rüthing & Steffen, "Lazy Code Motion" (PLDI 1992) | Optimal placement |
 
 ### Hot Topics
 

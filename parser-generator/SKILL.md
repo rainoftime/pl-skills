@@ -378,7 +378,7 @@ A high-quality parser generator should have:
 | **Aho, Lam, Sethi, Ullman, "Compilers: Principles, Techniques, and Tools" (Dragon Book)** | Chapters 4-5 on parsing; LR parsing theory |
 | **Grune & Jacobs, "Parsing Techniques: A Practical Guide"** | Comprehensive survey of parsing algorithms |
 | **Knuth, "On the Translation of Context-Free Grammars"** | Original LR(k) paper |
-| **DeRemer, "Practical LR(k) Table Construction"** | LALR paper |
+| **DeRemer, "Simple LR(k) Grammars" (1971)** | LALR paper |
 | **Norvell, "Introduction to Parsing"** | Excellent tutorial on LR parsing |
 
 ## Research Tools & Artifacts
@@ -463,3 +463,4 @@ if E1 then if E2 then S1 else S2
 ```
 
 This is why bison uses precedence declarations!
+```

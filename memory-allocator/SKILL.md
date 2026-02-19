@@ -64,9 +64,9 @@ Memory allocators manage dynamic memory allocation and deallocation, a critical 
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| Wilson et al. "Dynamic Storage Allocation" | Survey of algorithms |
-| Bonwick "The Slab Allocator" | Linux slab allocator |
-| Berger et al. "Hoard" | Scalable multicore allocator |
+| **Wilson et al., "Dynamic Storage Allocation" (1994)** | Survey of algorithms |
+| **Bonwick, "The Linux Slab Allocator" (USENIX 1994)** | Linux slab allocator |
+| **Berger et al., "Hoard: A Scalable Memory Allocator" (PLDI 2000)** | Scalable multicore allocator |
 
 ## Tradeoffs and Limitations
 

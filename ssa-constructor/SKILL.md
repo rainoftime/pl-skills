@@ -341,6 +341,14 @@ class SSAToNormal:
 - `ssa-constructor` - Register allocation
 - `common-subexpression-eliminator` - CSE
 
+## Canonical References
+
+| Reference | Why It Matters |
+|-----------|----------------|
+| **Cytron et al., "Efficiently Computing Static Single Assignment Form and the Control Dependence Graph" (TOPLAS 1991)** | Original SSA paper |
+| **Appel, "Modern Compiler Implementation in ML", Ch. 19 (1998)** | SSA construction algorithms |
+| **Cooper & Torczon, "Engineering a Compiler", Ch. 9 (2003)** | Practical SSA implementation |
+
 ## Research Tools & Artifacts
 
 SSA implementations in production compilers:

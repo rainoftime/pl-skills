@@ -172,11 +172,11 @@ For each defunctionalization task, provide:
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| **Reynolds, "Definitional Interpreters for Higher-Order Functions"** | Original defunctionalization paper |
-| **Bell et al., "Defunctionalization of Typed Lambda Calculus"** | Type-preserving defunctionalization |
-| **Danvy et al., "Syntactic Preserves Semantic"** | Defunctionalization correctness |
-| **Might et al., "Environment Analysis via Lambda Defunctionalization** | Static analysis via defunctionalization |
-| **Styp et al., "Defunctionalizing Arrow Programs"** | Arrow combinator defunctionalization |
+| **Reynolds, "Definitional Interpreters for Higher-Order Functions" (1972)** | Original defunctionalization paper |
+| **Bell et al., "Defunctionalization of Typed Lambda Calculus" (2010)** | Type-preserving defunctionalization |
+| **Danvy et al., "Syntactic Preserves Semantic" (2011)** | Defunctionalization correctness |
+| **Might et al., "Environment Analysis via Lambda Defunctionalization" (2010)** | Static analysis via defunctionalization |
+| **Styp et al., "Defunctionalizing Arrow Programs" (2014)** | Arrow combinator defunctionalization |
 
 ## Tradeoffs and Limitations
 

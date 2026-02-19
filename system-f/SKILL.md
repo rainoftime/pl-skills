@@ -65,9 +65,10 @@ System F, also known as the polymorphic lambda calculus or Girard-Reynolds calcu
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| Girard, Lafont, Taylor (1989) "Proofs and Types" | Original System F presentation |
-| Pierce "Types and Programming Languages" Ch. 23-24 | Modern textbook treatment |
-| Reynolds "Types, Abstraction and Parametricity" | Parametricity theorem |
+| **Girard, Lafont, Taylor, "Proofs and Types" (1989)** | Original System F presentation |
+| **Pierce, "Types and Programming Languages" Ch. 23-24** | Modern textbook treatment |
+| **Reynolds, "Types, Abstraction and Parametric Polymorphism" (1983)** | Parametricity theorem |
+| **Wadler, "Theorems for Free!" (FPCA 1989)** | Practical parametricity results |
 
 ## Tradeoffs and Limitations
 
@@ -120,10 +121,19 @@ System F implementations:
 ## Research Frontiers
 
 ### 1. Higher-Rank Types
-- **Approach**: Rank-N polymorphism
+- **Challenge**: Type inference for rank-N polymorphism
+- **Approach**: Bidirectional type checking with annotations
+- **Papers**: Peyton Jones et al. "Practical type inference for arbitrary-rank types" (ICFP 2004)
+
+### 2. Kind Systems
+- **Challenge**: Higher-kinded polymorphism
+- **Approach**: Kind inference and checking
+- **Papers**: "System Fω" (Girard)
 
 ## Implementation Pitfalls
 
 | Pitfall | Real Consequence | Solution |
 |---------|-----------------|----------|
-| **Type inference** | Undecidable | Bidirectional |
+| **Type inference undecidable** | Non-termination | Use bidirectional checking |
+| **Variable capture** | Wrong types | De Bruijn indices |
+| **Missing type application** | Runtime errors | Explicit instantiation |

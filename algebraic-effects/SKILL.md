@@ -52,9 +52,10 @@ Implements algebraic effects and effect handlers - a modular approach to computa
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| Eff: Programming with Algebraic Effects and Effect Handlers | Original Eff language papers |
-| Algebraic Effects for Functional Programming | Practical handler implementation |
-| Effect Handlers in Scope, Globally | Modular handler composition |
+| Plotkin & Pretnar "Handlers of Algebraic Effects" (2009) | Foundational effect handlers paper |
+| Bauer & Pretnar "Programming with Algebraic Effects and Handlers" | Eff language implementation |
+| Leijen "Koka: Programming with Row Polymorphic Effect Types" (2014) | Effect rows in practice |
+| Kammar et al. "Handlers in Action" (ICFP 2013) | Comprehensive handler study |
 
 ## Tradeoffs and Limitations
 
@@ -94,10 +95,18 @@ Algebraic effect implementations:
 
 ### 1. Effect Inference
 - **Goal**: Reduce annotation burden
-- **Papers**: "Effect Inference" (various)
+- **Approach**: Row polymorphism, effect variables
+- **Papers**: "A Theory of Effect Inference" (Lucassen & Gifford)
+
+### 2. Algebraic Effects for Concurrency
+- **Goal**: Composable concurrency primitives
+- **Approach**: Effect handlers for async/await
+- **Papers**: "Asynchronous Effect Handlers" (2019)
 
 ## Implementation Pitfalls
 
 | Pitfall | Real Consequence | Solution |
 |---------|-----------------|----------|
-| **Continuation leak** | Memory issues | Proper resumption |
+| **Continuation leak** | Memory issues | Proper resumption handling |
+| **Effect row ambiguity** | Unclear effect set | Explicit row variables |
+| **Handler ordering** | Wrong semantics | Define evaluation order |

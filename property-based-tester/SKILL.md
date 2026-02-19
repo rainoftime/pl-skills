@@ -52,9 +52,9 @@ Implements property-based testing frameworks that generate random test inputs an
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| QuickCheck: Lightweight Automatic Testing | Original Haskell testing library |
-| Hypothesis: Property-based testing in Python | Python ecosystem standard |
-| Testing the Hard Stuff | Random testing for critical software |
+| **Claessen & Hughes, "QuickCheck: Lightweight Automatic Testing" (ICFP 2000)** | Original Haskell property-based testing library |
+| **MacIver, "Hypothesis: Property-Based Testing in Python" (2015+)** | Python ecosystem standard with sophisticated coverage guidance |
+| **Claessen & Hughes, "Testing the Hard Stuff and Staying Sane" (ICFP 2002)** | Advanced random testing techniques for critical software |
 
 ## Tradeoffs and Limitations
 

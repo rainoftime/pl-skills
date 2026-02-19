@@ -259,11 +259,11 @@ Rules:
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| **Clarke, "Ownership Types for Safe Programming"** | Original ownership types paper |
-| **Boyland, "Alias Burdens"** | Aliasing and ownership |
-| **Wagner, "Solving the Aliasing Problem"** | Practical ownership |
-| **Gay & Aiken, "Language Support for Regions"** | Region-based memory |
-| **Tofte & Talpin, "Region-Based Memory Management"** | Regions paper |
+| **Clarke, "Ownership Types for Safe Programming" (1998)** | Original ownership types paper |
+| **Boyland, "Alias Burdens" (2001)** | Aliasing and ownership |
+| **Wagner, "Solving the Aliasing Problem" (2002)** | Practical ownership |
+| **Gay & Aiken, "Language Support for Regions" (PLDI 1998)** | Region-based memory |
+| **Tofte & Talpin, "Region-Based Memory Management" (1997)** | Regions for ML |
 
 ## Tradeoffs and Limitations
 

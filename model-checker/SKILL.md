@@ -384,17 +384,17 @@ class LivenessChecker:
 
 - `symbolic-execution-engine` - Symbolic execution
 - `weak-memory-model-verifier` - Memory models
-- `model-checker` - Bounded verification
+- `smt-solver-interface` - SMT solving
 
 ## Canonical References
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| **Clarke, Grumberg & Peled, "Model Checking"** | Definitive textbook on model checking |
-| **Biere et al., "Symbolic Model Checking without BDDs"** | BMC paper (CAV 1999) |
-| **Ball & Rajamani, "The SLAM Project"** | Software model checking |
-| **Kurshan, "Computer-Aided Verification"** | Hardware model checking origins |
-| **Holzmann, "The Model Checker Spin"** | SPIN model checker |
+| **Clarke, Grumberg, Kroening, Peled, Veith, "Model Checking" (MIT Press, 2018)** | Definitive textbook on model checking |
+| **Biere, Cimatti, Clarke, Zhu, "Symbolic Model Checking without BDDs" (TACAS 1999)** | BMC paper |
+| **Ball & Rajamani, "The SLAM Project: Debugging System Software via Static Analysis" (POPL 2002)** | Software model checking |
+| **Kurshan, "Computer-Aided Verification of Coordinating Processes" (1994)** | Hardware model checking origins |
+| **Holzmann, "The Model Checker SPIN" (IEEE TSE 1997)** | SPIN model checker |
 
 ## Tradeoffs and Limitations
 

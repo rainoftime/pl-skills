@@ -97,11 +97,11 @@ while i < n do
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| **Hoare, "An Axiomatic Basis for Computer Programming"** | Original Hoare logic paper (Turing Award) |
-| **Apt & Olderog, "Verification of Programs"** | Comprehensive survey |
-| **Floyd, "Assigning Meanings to Programs"** | Predecessor to Hoare logic |
-| **Nielson & Nielson, "Hoare Logic"** | Formal treatment |
-| **Gupta et al., "A Practical Guide to Design of C Programs"** | Verifiable C coding |
+| **Hoare, "An Axiomatic Basis for Computer Programming" (CACM 1969)** | Original Hoare logic paper (Turing Award) |
+| **Apt & Olderog, "Verification of Programs" (1981)** | Comprehensive survey |
+| **Floyd, "Assigning Meanings to Programs" (1967)** | Predecessor to Hoare logic |
+| **Nielson & Nielson, "Hoare Logic" (1999)** | Formal treatment |
+| **Gupta et al., "A Practical Guide to Design of C Programs" (1991)** | Verifiable C coding |
 
 ## Tradeoffs and Limitations
 

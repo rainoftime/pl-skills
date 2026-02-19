@@ -112,7 +112,8 @@ Actor model implementations:
 
 ### Papers
 
-- **Hewitt et al.** - Original actor model papers
+- **Hewitt, Bishop, Steiger (1973)** - Original actor model paper "A Universal Modular ACTOR Formalism for Artificial Intelligence"
+- **Agha (1986)** - "Actors: A Model of Concurrent Computation in Distributed Systems"
 - **Armstrong** - Erlang design papers
 
 ## Research Frontiers

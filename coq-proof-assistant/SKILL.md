@@ -275,11 +275,11 @@ End MySection.
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| **Bertot & Castéran, "Interactive Theorem Proving and Program Development"** | Coq's standard textbook; comprehensive Coq development |
-| **Chlipala, "Certified Programming with Dependent Types"** | Practical IDP (Interactive Density Polymorphism) techniques |
-| **Pierce et al., "Software Foundations"** | Building verified software in Coq, volumes 1-4 |
+| **Bertot & Castéran, "Interactive Theorem Proving and Program Development" (2004)** | Coq's standard textbook; comprehensive Coq development |
+| **Chlipala, "Certified Programming with Dependent Types" (2013)** | Practical Coq development techniques using interactive proving |
+| **Pierce et al., "Software Foundations" (2005-2020)** | Building verified software in Coq, volumes 1-6 |
 | **The Coq Proof Assistant Reference Manual** | Official documentation |
-| **Gonthier & Werner, "A Machine-Checked Proof of the Four Color Theorem"** | Large-scale proof engineering |
+| **Gonthier & Werner, "A Machine-Checked Proof of the Four Color Theorem" (2008)** | Large-scale proof engineering |
 
 ## Tradeoffs and Limitations
 

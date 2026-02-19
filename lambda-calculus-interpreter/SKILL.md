@@ -179,7 +179,7 @@ def check(t: Term, expected: Type, env: dict) -> tuple[None, list[Constraint]]:
 |------------|----------------|-------------|
 | `(λx. x) (λy. y)` | Closure(λy. y, {}) | Identity applied to identity |
 | `(λx. λy. x) (λz. z)` | Closure(λy. x, {x: Closure(λz.z)}) | Constant function |
-| `((λf. f f) (λx. x))` | Closure(λx. x, {}) | Omega combinator (diverges in normal form) |
+| `(λx. x x) (λx. x x)` | Diverges | Omega combinator (Ω = ω ω, where ω = λx. x x) |
 | `(λf. λx. f x) (λy. succ y)` | Closure(λx. f x, {f: Closure(λy. succ y)}) | Function application |
 
 ### Using the Script
@@ -262,8 +262,8 @@ For lambda calculus implementations, these are the gold-standard references:
 | **Standard ML of New Jersey** | Efficient CBV, lazy compilation |
 | **OCaml's lambda IR** | Practical intermediate representation |
 | **GHC Core** | Optimization-oriented lambda calculus |
-| **Berkeley's Socrates** | Optimal reduction implementation |
-| **Jen's equational reasoning** | Formal verification of reduction |
+| **Lamping/Gonthier optimal reduction** | Optimal graph reduction via interaction nets |
+| **Lispkit Lisp** | SECD machine implementation |
 
 ### Interactive Lambda Calculus Environments
 
@@ -276,8 +276,8 @@ For lambda calculus implementations, these are the gold-standard references:
 ### 1. Optimal Reduction
 - **Goal**: Reduce to normal form with minimal work
 - **Key technique**: Sharing via graphs, not trees
-- **Paper**: "Optimal Lambda Reduction" (Lamping, 1990) - Sangiorgi's later work
-- **Implementation**: Optimal, Borough, Catt
+- **Paper**: "An Algorithm for Optimal Lambda Calculus Reduction" (Lamping, POPL 1990)
+- **Implementation**: Interaction nets, Gonthier et al. refinement
 
 ### 2. Explicit Substitutions
 - **Goal**: Formalize substitution as a computational step
@@ -294,7 +294,7 @@ For lambda calculus implementations, these are the gold-standard references:
 ### 4. Abstract Machines
 - **Goal**: Bridge lambda calculus and real execution
 - **Key technique**: SECD, Krivine, CAM
-- **Paper**: "The SECD Machine" (Landin, 1964), "The Krivine Machine" (Krivine, 2007)
+- **Paper**: "The Mechanical Evaluation of Expressions" (Landin, 1964), "A call-by-name lambda-calculus machine" (Krivine, 1985; published 2007)
 - **Implementation**: Most functional language compilers
 
 ## Implementation Pitfalls
@@ -399,3 +399,4 @@ A high-quality λ-calculus interpreter should have:
 ✅ **Good**: Correct β-reduction, handles closures, configurable strategies
 ⚠️ **Warning**: Missing η-reduction, inefficient environments
 ❌ **Bad**: Capture-avoidance bugs, infinite loops on normal terms
+```

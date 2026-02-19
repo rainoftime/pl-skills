@@ -19,6 +19,26 @@ dependencies:
 
 # Row Polymorphism
 
+## When to Use
+
+- Building extensible records/variants without nominal inheritance
+- Designing effect rows or capability rows
+- Implementing structural extensibility with type inference
+
+## What This Skill Does
+
+1. Models open rows with row variables
+2. Defines row unification and row constraints
+3. Supports record extension/projection typing
+4. Explains tradeoffs for disjoint vs non-disjoint row systems
+
+## How to Use
+
+1. Represent rows as ordered/canonical label maps plus a tail variable
+2. Define row unification with occurs checks on row variables
+3. Enforce label constraints during extension/projection
+4. Add diagnostics for missing labels and ambiguous row constraints
+
 ## Role Definition
 
 You are a **row polymorphism expert** specializing in polymorphic record and variant types. You understand the theory of row types, extensible records, duplicate labels, and the connection to type inference and object systems.
@@ -87,7 +107,7 @@ override :: { l: a | ρ } → a → { l: a | ρ }
 
 | Approach | Description | Examples |
 |----------|-------------|----------|
-| **Record of functions** | Each label is function |-duck typing) |
+| **Record of functions** | Encode behavior as record fields | Object encodings |
 | **Dictionary passing** | Pass row as implicit dictionary | OCaml objects |
 | **Type-level computation** | Rows as type-level lists | Haskell |
 
@@ -170,7 +190,7 @@ For row polymorphism tasks, provide:
 | **Wand, "Type Inference for Objects"** | Row polymorphism origins |
 | **Gaster & Jones, "A Polymorphic Type System for Extensible Records"** | Extended records |
 | **Rémy, "Type Inference for Records"** | Comprehensive treatment |
-| **G，尤" & Wand, "Calculus of Synthetic Transitions"** | Row types theory |
+| **Rémy, "Typing Record Concatenation for Free"** | Record concatenation and row-style typing |
 | **Leijen, "Extensible Records"** | Practical row types |
 
 ## Tradeoffs and Limitations

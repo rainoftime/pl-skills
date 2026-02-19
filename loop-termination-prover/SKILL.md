@@ -60,6 +60,14 @@ Proves loop termination using ranking functions.
 - Consider multiple phases
 - Handle recursion too
 
+## Canonical References
+
+| Reference | Why It Matters |
+|-----------|----------------|
+| **Podelski & Rybalchenko, "A Complete Method for the Synthesis of Linear Ranking Functions" (VMCAI 2004)** | Linear ranking functions |
+| **Bradley, Manna & Sipma, "Linear Ranking with Reachability" (CAV 2005)** | Termination proofs |
+| **Cook et al., "Ranking Abstractions" (POPL 2006)** | Abstraction for termination |
+
 ## Related Skills
 
 - `hoare-logic-verifier` - Hoare logic

@@ -5,7 +5,7 @@ version: "1.0.0"
 tags: [verification, equivalence, bisimulation, operational-semantics]
 difficulty: advanced
 languages: [ocaml, coq]
-dependencies: [operational-semantics, bisimulation-checker]
+dependencies: [operational-semantics-definer, bisimulation-checker]
 ---
 
 # Contextual Equivalence
@@ -39,7 +39,14 @@ A skill for proving contextual equivalence between programs using operational se
 
 ## References
 
-See: `../simply-typed-lambda-calculus`, `../bisimulation-checker`, `../operational-semantics-definer`
+| Reference | Why It Matters |
+|-----------|----------------|
+| **Morris, "Lambda Calculus Types and Models" (1968)** | Original contextual equivalence formulation |
+| **Milner, "Operational and Algebraic Semantics" (1997)** | Comprehensive overview of contextual equivalence |
+| **Gunter, "Semantic Foundations for Programming Languages"** | Formal treatment of program equivalence |
+| **Reynolds, "Theories of Programming Languages"** | Contextual equivalence in type theory |
+
+See also: `../simply-typed-lambda-calculus`, `../bisimulation-checker`, `../operational-semantics-definer`
 
 ## Research Tools & Artifacts
 

@@ -197,11 +197,11 @@ If ⊢ e : τ and e → e', then ⊢ e' : τ
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| **Gordon, "Mechanising Programming Languages"** | POPL courses at Cambridge |
-| **Reynolds, "Theories of Programming Languages"** | Comprehensive semantics text |
-| **Winskel, "The Formal Semantics of Programming Languages"** | Standard textbook |
-| **Plotkin, "A Structural Approach to Operational Semantics"** | Original structural operational semantics |
-| **Pierce, "Types and Programming Languages"** | Chapter 3 covers operational semantics |
+| **Gordon, "Mechanising Programming Languages" (Cambridge, 1994)** | POPL courses at Cambridge |
+| **Reynolds, "Theories of Programming Languages" (1998)** | Comprehensive semantics text |
+| **Winskel, "The Formal Semantics of Programming Languages" (1993)** | Standard textbook |
+| **Plotkin, "A Structural Approach to Operational Semantics" (1981)** | Original structural operational semantics |
+| **Pierce, "Types and Programming Languages", Ch. 3 (2002)** | Chapter 3 covers operational semantics |
 
 ## Tradeoffs and Limitations
 

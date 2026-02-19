@@ -36,6 +36,13 @@ Generates sound and complete type checkers from formal type system specification
 3. **Proves soundness** - Outputs progress + preservation proof sketch
 4. **Handles edge cases** - Generates error messages for type errors
 
+## How to Use
+
+1. Specify syntax and declarative typing rules for your language
+2. Encode algorithmic checking rules (and inference where needed)
+3. Add substitution/unification support for polymorphism
+4. Validate with positive/negative tests and meta-theory checks
+
 ## Key Concepts
 
 ### Type System Components
@@ -232,14 +239,14 @@ For implementing type checkers, refer to these research-quality implementations:
 
 - **"Practical Type Inference for the GHC Type System"** (Jones, 2007) - GHC's implementation
 - **"Complete and Easy Bidirectional Type Checking"** (Pfenning & Davies, 2001) - The gold standard for bidirectional typing
-- **"Row Polymorphism in Practice"** (Gyllensward & warm) - OCaml's object system roots
+- **"Extensible records with scoped labels"** (Leijen, 2005) - Practical row polymorphism design
 
 ## Research Frontiers
 
 Current active research directions in type checking:
 
 ### 1. Gradual Typing & Reliability
-- **Key papers**: "Gradual Typing for Functional Languages" (Siek & Taha, 2006), "The Python Type Checker" (Muehlhoefer & others)
+- **Key papers**: "Gradual Typing for Functional Languages" (Siek & Taha, 2006), "Reticulated Python" (Vitousek et al.)
 - **Challenge**: Blending static and dynamic typing seamlessly
 - **Tools**: Pyre (Facebook), mypy, TypeScript
 

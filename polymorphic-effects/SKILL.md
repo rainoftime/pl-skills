@@ -150,6 +150,15 @@ shallowHandler = \case
 | **Logging/Tracing** | Effectful logging |
 | **Testing** | Mock effects |
 
+## Canonical References
+
+| Reference | Why It Matters |
+|-----------|----------------|
+| **Kammar, Lindley, Oury, "Handlers in Action" (ICFP 2013)** | Practical effect handlers |
+| **Pretnar, "The Logic and Handling of Algebraic Effects" (PhD 2010)** | Theoretical foundations |
+| **Leijen, "Koka: Effect Handlers for an Imperative Language" (2014)** | Practical effect implementation |
+| **Zhang, G. et al., "Effect Handlers via Lexical Scoping" (2021)** | Modular handler composition |
+
 ## Quality Criteria
 
 Your polymorphic effects implementations must:

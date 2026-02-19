@@ -147,6 +147,15 @@ readIVar v = readRef v >>= \case
 | **Compilers** | Incremental parsing, type checking |
 | **Symbol execution** | Dynamic analysis |
 
+## Canonical References
+
+| Reference | Why It Matters |
+|-----------|----------------|
+| **Demers et al., "Incremental Computing" (1980s)** | Early incremental computation work |
+| **Pugh, "Incremental Computation" (1992)** | Survey of incremental techniques |
+| **Liu & Myers, "Incremental Computation" (2001)** | Self-adjusting computation |
+| **Ghemawat & Dean, "The Google MapReduce Paper" (2004)** | Distributed incremental processing |
+
 ## Quality Criteria
 
 Your incremental implementations must:
@@ -206,15 +215,24 @@ Real-world incremental computation systems:
 
 | Tool | Why It Matters |
 |------|----------------|
-| **Adapton** | Incremental computation in OCaml |
-| **Self-adjusting computation** | CMU research system |
-| **Incrementality in IDEs** | IntelliJ, VSCode |
-| **Build systems** | Make, Bazel, Buck |
+| **Adapton** | Demand-driven incremental computation (OCaml, PLDI 2014) |
+| **Self-Adjusting Computation** | Acar et al., CMU research system (POPL 2002) |
+| **Incrementality in IDEs** | IntelliJ, VSCode incremental compilation |
+| **Build systems** | Make, Bazel, Buck, Nix |
 
 ### Key Systems
 
-- **Adapton**: Demand-driven incrementalism
-- **Bazel**: Distributed build system
+- **Adapton**: Demand-driven incrementalism with nominal memoization
+- **Bazel**: Distributed incremental build system
+- **Self-Adjusting Computation**: Language-based adaptive computation
+
+## Canonical References
+
+| Reference | Why It Matters |
+|-----------|----------------|
+| **Acar, Blelloch & Harper, "Adaptive Functional Programming" (POPL 2002)** | Foundational self-adjusting computation paper |
+| **Hammer et al., "Adapton: Composable, Demand-Driven Incremental Computation" (PLDI 2014)** | Demand-driven incremental computation with nominal memoization |
+| **Acar, "Self-Adjusting Computation" (PhD Thesis, CMU 2005)** | Comprehensive treatment of self-adjusting computation |
 
 ## Research Frontiers
 

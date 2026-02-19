@@ -66,9 +66,9 @@ Software Transactional Memory (STM) provides a composable abstraction for concur
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| Shavit, Touitou "Software Transactional Memory" | Original STM paper |
-| Harris et al. "Composable Memory Transactions" | Haskell STM |
-| Herlihy, Moss "Transactional Memory" | Hardware TM |
+| Herlihy & Moss "Transactional Memory: Architectural Support for Lock-Free Data Structures" (1993) | Hardware TM foundation |
+| Shavit & Touitou "Software Transactional Memory" (1997) | Original STM paper |
+| Harris, Marlow, Peyton Jones, Herlihy "Composable Memory Transactions" (2005) | Haskell STM |
 
 ## Tradeoffs and Limitations
 

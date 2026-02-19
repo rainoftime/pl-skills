@@ -352,8 +352,8 @@ class Vulnerability:
 ## Related Skills
 
 - `dataflow-analysis-framework` - Dataflow
-- `taint-analysis` - Type systems
-- `dataflow-analysis-framework` - General analysis
+- `information-flow-analyzer` - Information flow
+- `alias-and-points-to-analysis` - Pointer analysis
 
 ## Canonical References
 

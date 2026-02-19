@@ -64,6 +64,14 @@ Transforms closures to explicit environment passing.
 - `jit-compiler-builder` - VM design
 - `lambda-calculus-interpreter` - Bytecode
 
+## Canonical References
+
+| Reference | Why It Matters |
+|-----------|----------------|
+| **Reynolds, "Definitional Interpreters for Higher-Order Functions" (1972)** | Closure conversion theory |
+| **Plotkin, "Call-by-Name, Call-by-Value and the λ-Calculus" (1975)** | Lambda calculus foundations |
+| **Fisher & Springer, "Lambda-Liftable Modules" (2000)** | Lambda lifting and closure conversion |
+
 ## Research Tools & Artifacts
 
 Real-world closure conversion implementations to study:

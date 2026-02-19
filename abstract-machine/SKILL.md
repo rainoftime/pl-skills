@@ -65,9 +65,9 @@ Abstract machines define operational semantics by specifying computation as tran
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| Felleisen, Friedman "A Calculus for Assignments" | CEK machine |
-| Landin "The Mechanical Evaluation of Expressions" | SECD machine |
-| Krivine "A call-by-name lambda-calculus machine" | Krivine machine |
+| **Felleisen & Friedman, "A Calculus for Assignments" (1986)** | CEK machine |
+| **Landin, "The Mechanical Evaluation of Expressions" (1964)** | SECD machine |
+| **Krivine, "A Call-by-Name Lambda-Calculus Machine" (1985)** | Krivine machine |
 
 ## Tradeoffs and Limitations
 
@@ -133,8 +133,8 @@ Current active research in abstract machines:
 
 | Direction | Key Papers | Challenge |
 |-----------|------------|-----------|
-| **Effect handlers** | "Effect Handlers in Scope" (2014) | Encoding algebraic effects in CEK/Krivine |
-| **Delimited continuations** | "Delimited Control Operators" (2012) | Multiple prompts, composable snapshots |
+| **Effect handlers** | "Handlers of Algebraic Effects" (Plotkin & Pretnar, 2009) | Encoding algebraic effects in CEK/Krivine |
+| **Delimited continuations** | "Control Delimiters and their Hierarchies" (Felleisen, 1988) | Multiple prompts, composable snapshots |
 | **Multi-stage** | "MetaOCaml" (2003) | Staging the machine itself |
 | **WebAssembly** | "A Formal Specification" (2020) | Verification of the reference interpreter |
 | **Zero-cost exceptions** | "Zero-cost Exception Handling" (2018) | Efficient error paths without overhead |

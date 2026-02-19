@@ -35,17 +35,25 @@ Implements complete Hindley-Milner (HM) type inference with let-polymorphism.
 3. **Solves constraints** - Most general unifier (MGU)
 4. **Handles polymorphism** - Generalizes let-bound polymorphism
 
-## Key Concepts)
-            
-            case Let(x, e1, e2):
-                t1, c1 = self.infer(env, e1)
-                # Generalize: close over free type variables
-                ftv = free_type_vars(t1) - free_type_vars(env)
-                scheme = ForAll(list(ftv), t1)
-                t2, c2 = self.infer({**env, x: scheme}, e2)
-                return (t2, compose(c1, c2))
-        
-        raise ValueError(f"Unknown term: {term}")
+## How to Use
+
+1. Define your term and type syntax (`Var`, `Lam`, `App`, `Let`, etc.)
+2. Implement unification with an occurs check
+3. Add generalization at `let` bindings and instantiation at variable lookup
+4. Run inference and pretty-print the principal type
+
+```python
+def infer(term, env):
+    match term:
+        case Let(x, e1, e2):
+            t1, c1 = infer(e1, env)
+            sigma = solve(c1)
+            t1 = apply_subst(sigma, t1)
+            env1 = apply_subst_env(sigma, env)
+            scheme = generalize(t1, env1)
+            t2, c2 = infer(e2, {**env1, x: scheme})
+            return (t2, compose(c2, sigma))
+    raise ValueError(f"unknown term: {term}")
 ```
 
 ### Let-Polymorphism
@@ -132,11 +140,11 @@ Solution:
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| **Milner, "A Theory of Type Polymorphism in Programming"** | Original Hindley-Milner paper; let-polymorphism |
-| **Damas & Milner, "Principal Type Schemes for Functional Languages"** | Algorithm J (principal types) |
-| **Hindley, "The Principal Type-Scheme of an Object in Combinatory Logic"** | Original HM work |
-| **Jones, "Practical Type Inference for the GC Language"** | GHC Haskell's type inference |
-| **Peyton Jones, "The GHC Type System"** | Modern extensions to HM |
+| **Milner, "A Theory of Type Polymorphism in Programming" (1978)** | Original Hindley-Milner paper; let-polymorphism |
+| **Damas & Milner, "Principal Type Schemes for Functional Languages" (POPL 1982)** | Algorithm J for principal types |
+| **Hindley, "The Principal Type-Scheme of an Object in Combinatory Logic" (1969)** | Original HM work |
+| **Jones, "Practical Type Inference for GHC" (2007)** | GHC Haskell's type inference |
+| **Peyton Jones, "The GHC Type System" (2003)** | Modern extensions to HM |
 
 ## Research Tools & Artifacts
 
@@ -153,7 +161,7 @@ Real-world type inference implementations to study:
 
 ### Papers with Available Implementations
 
-- **"Practical Type Inference for the GC Language"** - GHC's actual implementation
+- **"Practical Type Inference for GHC"** - GHC's actual implementation
 - **"OutsideIn(X)"** - GHC's external core approach (Peyton Jones et al.)
 - **"Complete and Easy Bidirectional Type Checking"** - The "Dungeons" paper
 

@@ -65,9 +65,9 @@ Liveness analysis determines which variables may be used in the future at each p
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| Aho, Lam, Sethi, Ullman "Compilers" | Classic treatment |
-| Muchnick "Advanced Compiler Design" | Detailed algorithms |
-| Cytron et al. "Efficiently Computing SSA Form" | SSA liveness |
+| **Aho et al., "Compilers: Principles, Techniques, and Tools", Ch. 9 (1986)** | Classic treatment |
+| **Muchnick, "Advanced Compiler Design and Implementation", Ch. 9 (1997)** | Detailed algorithms |
+| **Cytron et al., "Efficiently Computing Static Single Assignment Form" (TOPLAS 1991)** | SSA liveness |
 
 ## Tradeoffs and Limitations
 

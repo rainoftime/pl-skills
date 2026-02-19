@@ -228,18 +228,18 @@ let process_file (path : string) =
 type qubit = Q of int
 
 (* Quantum gate: linear function *)
-let hadamard (q : qubit) : qubit * qubit =
-  (* Cannot copy quantum state! *)
-  (q, q)  (* Actually creates superposition *)
+let hadamard (q : qubit) : qubit =
+  (* Creates superposition - still linear! *)
+  apply_gate H q
 
 (* Linear map *)
 let quantum_not (q : qubit) : qubit =
   apply_gate X q
 
-(* Measurement - consumes qubit *)
-let measure (q : qubit) : bool * qubit =
-  (* Collapse superposition *)
-  (Random.bool (), q)  (* Simplified *)
+(* Measurement - consumes qubit, returns classical bit *)
+let measure (q : qubit) : bool =
+  (* Collapse superposition - qubit is consumed *)
+  Random.bool ()  (* Simplified *)
 ```
 
 ## Key Concepts
@@ -269,6 +269,15 @@ let measure (q : qubit) : bool * qubit =
 - Consider copyable types
 - Implement borrowing (like Rust)
 
+## Canonical References
+
+| Reference | Why It Matters |
+|-----------|----------------|
+| **Girard, "Linear Logic" (Theoretical Computer Science, 1987)** | Original linear logic foundation |
+| **Abramsky, "Computational Interpretations of Linear Logic" (1993)** | Semantic foundations for programming |
+| **Wadler, "Linear Types Can Change the World!" (2000)** | Linear types in programming |
+| **Baker, "Use-Once Variables and Linear Objects" (1994)** | Linear objects and resources |
+
 ## Related Skills
 
 - `session-type-checker` - Session types
@@ -289,7 +298,7 @@ Linear type implementations:
 ### Key Papers
 
 - **Girard** - Linear logic
-- **Wadler** - Linear types for free
+- **Wadler** - Linear types in programming
 
 ## Research Frontiers
 

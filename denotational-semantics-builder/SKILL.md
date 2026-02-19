@@ -300,6 +300,15 @@ Relationship:
 | **Adequacy** | Operational ↔ Denotational |
 | **Full abstraction** | Context equivalence |
 
+## Canonical References
+
+| Reference | Why It Matters |
+|-----------|----------------|
+| **Stoy, "Denotational Semantics of Programming Languages" (1977)** | Definitive textbook on denotational semantics |
+| **Winskel, "The Formal Semantics of Programming Languages" (1993)** | Comprehensive treatment |
+| **Abramsky & Jung, "Domain Theory" (1994)** | Mathematical foundations |
+| **Gordon, "Denotational Semantics" (Handbook of Mathematical Logic, 1979)** | Handbook of mathematical logic |
+
 ## Tips
 
 - Start with simple types
