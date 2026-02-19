@@ -359,11 +359,10 @@ class Vulnerability:
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| **Denning, "A Lattice Model of Secure Information Flow"** | Original taint tracking paper |
-| **Monnappa, "Learning Malware Analysis"** | Taint analysis for security |
-| **Schwartz et al., "All You Ever Wanted to Know about Dynamic Taint Analysis"** | Comprehensive survey |
-| **Newsome & Song, "Dynamic Taint Analysis for Automatic Detection"** | DTA for vulnerability detection |
-| **Haldar et al., "Semantic Taint Analysis"** | Taint for Java |
+| **Denning, "A Lattice Model of Secure Information Flow" (CACM 1976)** | Foundational information flow paper |
+| **Schwartz et al., "All You Ever Wanted to Know About Dynamic Taint Analysis" (2007)** | Comprehensive survey |
+| **Newsome & Song, "Dynamic Taint Analysis for Automatic Detection" (NDSS 2005)** | DTA for vulnerability detection |
+| **Haldar et al., "Dynamic Taint Propagation for Java" (ACSAC 2005)** | Taint for Java |
 
 ## Tradeoffs and Limitations
 

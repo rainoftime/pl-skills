@@ -65,9 +65,9 @@ Shape analysis determines the "shape" of heap data structures (lists, trees, cyc
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| Sagiv, Reps, Wilhelm "Parametric shape analysis" | TVLA framework |
-| Distefano, O'Hearn, Yang "A local shape analysis" | Separation logic shapes |
-| Jones, Muchnick "A flexible approach to pointer analysis" | Shape graphs |
+| **Sagiv, Reps, Wilhelm, "Parametric Shape Analysis via 3-Valued Logic" (POPL 1999/TOPLAS 2002)** | TVLA framework |
+| **Distefano, O'Hearn, Yang, "A Local Shape Analysis Based on Separation Logic" (TACAS 2006)** | Separation logic shapes |
+| **Jones & Muchnick, "A Flexible Approach to Pointer Analysis" (POPL 1982)** | Shape graphs |
 
 ## Tradeoffs and Limitations
 

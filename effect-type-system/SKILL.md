@@ -263,11 +263,11 @@ class EffectInference:
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| **Wadler, "The Great Escape: Isolating Effectful Code" (1995)** | Effects in Haskell |
-| **Bauer & Pretnar, "Programming with Algebraic Effects and Effect Handlers" (2015)** | Effect handlers tutorial |
-| **Kammar, Lindley, Oury, "Handlers in Action" (ICFP 2013)** | Algebraic effects foundation |
-| **Plotkin & Pretnar, "Handlers of Algebraic Effects" (POPL 2009)** | Effect handlers |
-| **Leijen, "Koka: Effect Handlers for an Imperative Language" (2014)** | Practical effect handlers |
+| **Plotkin & Pretnar, "Handlers of Algebraic Effects" (ESOP 2009)** | Foundational paper on effect handlers |
+| **Bauer & Pretnar, "Programming with Algebraic Effects and Handlers" (J. LAMP, 2015)** | Effect handlers tutorial and the Eff language |
+| **Kammar, Lindley, Oury, "Handlers in Action" (ICFP 2013)** | Popularized handlers with implementations |
+| **Plotkin & Power, "Notions of Computation Determine Monads" (2002)** | Algebraic foundations of effects |
+| **Leijen, "Koka: Programming with Row Polymorphic Effect Types" (MSFP 2014)** | Practical effect-typed language |
 
 ## Tradeoffs and Limitations
 

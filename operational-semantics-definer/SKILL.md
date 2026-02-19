@@ -197,7 +197,7 @@ If ⊢ e : τ and e → e', then ⊢ e' : τ
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| **Gordon, "Mechanising Programming Languages" (Cambridge, 1994)** | POPL courses at Cambridge |
+| **Gordon, "The Denotational Description of Programming Languages" (1979)** | Introductory denotational semantics |
 | **Reynolds, "Theories of Programming Languages" (1998)** | Comprehensive semantics text |
 | **Winskel, "The Formal Semantics of Programming Languages" (1993)** | Standard textbook |
 | **Plotkin, "A Structural Approach to Operational Semantics" (1981)** | Original structural operational semantics |
@@ -249,7 +249,7 @@ Formal semantics in proof assistants:
 ### 1. Parametricity
 - **Goal**: Prove properties from typing alone
 - **Technique**: Relational parametricity (Reynolds)
-- **Papers**: "Types, Abstraction and Parametric Polymorphism" (Wadler)
+- **Papers**: "Types, Abstraction and Parametric Polymorphism" (Reynolds, 1983), "Theorems for Free!" (Wadler, 1989)
 - **Application**: Free theorems
 
 ### 2. Contextual Equivalence
@@ -265,7 +265,7 @@ Formal semantics in proof assistants:
 ### 4. Denotational Semantics Integration
 - **Goal**: Connect operational and denotational
 - **Technique**: Full abstraction proofs
-- **Papers**: "Full Abstraction for PCF" (Milner, Plotkin, etc.)
+- **Papers**: "Full Abstraction for PCF" (Abramsky, Jagadeesan, Malacaria; Hyland, Ong - independently, 1990s)
 
 ## Implementation Pitfalls
 

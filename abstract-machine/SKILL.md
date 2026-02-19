@@ -65,9 +65,9 @@ Abstract machines define operational semantics by specifying computation as tran
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| **Felleisen & Friedman, "A Calculus for Assignments" (1986)** | CEK machine |
+| **Felleisen & Friedman, "Control Operators, the SECD-Machine, and the λ-Calculus" (1986)** | CEK machine |
 | **Landin, "The Mechanical Evaluation of Expressions" (1964)** | SECD machine |
-| **Krivine, "A Call-by-Name Lambda-Calculus Machine" (1985)** | Krivine machine |
+| **Krivine, "A Call-by-Name Lambda-Calculus Machine" (published 2007, developed earlier)** | Krivine machine |
 
 ## Tradeoffs and Limitations
 

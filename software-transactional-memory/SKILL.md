@@ -80,7 +80,7 @@ STM implementations:
 
 - **Shavit & Touitou (1997)** - Original software transactional memory paper
 - **Herlihy & Moss (1993)** - Hardware transactional memory
-- **Harris et al. (2005)** - Composable memory transactions (Haskell STM)
+- **Harris, Marlow, Peyton Jones, Herlihy (2005)** - "Composable Memory Transactions" (PPoPP 2005)
 
 ## Research Frontiers
 

@@ -379,7 +379,7 @@ class SteensgaardAnalysis(AliasAnalysis):
 ## Related Skills
 
 - `constant-propagation-pass` - Dataflow analysis
-- `common-subexpression-eliminator` - DCE
+- `dead-code-eliminator` - Dead code elimination
 - `dataflow-analysis-framework` - Analysis framework
 - `escape-analysis` - Uses points-to for heap analysis
 - `taint-analysis` - Combines with points-to
@@ -390,9 +390,9 @@ class SteensgaardAnalysis(AliasAnalysis):
 |-----------|----------------|
 | **Andersen, "Program Analysis and Specialization for the C Programming Language" (PhD thesis, 1994)** | Andersen's inclusion-based analysis |
 | **Steensgaard, "Points-to Analysis in Almost Linear Time" (POPL 1996)** | Unification-based analysis |
-| **Emami et al., "Context-Sensitive Pointer Analysis" (PLDI 1994)** | Context-sensitive variants |
-| **Landi, "Undecidability of Static Analysis" (1992)** | Theoretical limits |
-| **Hardekopf & Lin, "The Ant and the Grasshopper" (PLDI 2007)** | Fast points-to analysis |
+| **Emami, Ghiya, Hendren, "Context-Sensitive Interprocedural Points-to Analysis" (PLDI 1994)** | Context-sensitive analysis |
+| **Landi, "Undecidability of Static Analysis" (LOPLAS 1992)** | Theoretical limits |
+| **Hardekopf & Lin, "The Ant and the Grasshopper" (PLDI 2007)** | Fast inclusion-based analysis |
 
 ## Tradeoffs and Limitations
 

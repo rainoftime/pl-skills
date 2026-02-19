@@ -390,7 +390,7 @@ Real-world parser generators and tools:
 | **ANTLR 4** | Java | ALL(*) parsing, semantic predicates |
 | **Menhir** | OCaml | LR(1), incremental, error messages |
 | **Yacc/Bison** | C | Classic LALR, battle-tested |
-| **Happy** | Haskell | GLR, generative parsing |
+| **Happy** | Haskell | LALR(1), with optional GLR extension |
 | **Lalrpop** | Rust | Rust integration, error recovery |
 | **pest** | Rust | PEG parsing, grammar derivation |
 

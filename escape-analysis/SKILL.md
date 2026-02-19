@@ -65,9 +65,9 @@ Escape analysis determines whether objects allocated in a method can be accessed
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| Choi, Gupta, Serrano "Escape analysis for Java" (1999) | OOPSLA paper on Java escape analysis |
-| Blanchet "Escape analysis for Java" (2003) | Algorithm improvements |
-| Kotzmann et al. "Design of the Java HotSpot Client Compiler" | Production implementation |
+| **Choi, Gupta, Serrano, Sreedhar, Midkiff, "Escape Analysis for Java" (OOPSLA 1999)** | IBM connection graph approach |
+| **Blanchet, "Escape Analysis for Java: Theory and Practice" (TOPLAS 2003)** | Formal correctness proof |
+| **Kotzmann et al., "Design of the Java HotSpot Client Compiler" (OOPSLA 2008)** | Production implementation |
 
 ## Tradeoffs and Limitations
 

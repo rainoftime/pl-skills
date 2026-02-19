@@ -53,8 +53,8 @@ Implements common subexpression elimination optimization.
 ## Related Skills
 
 - `constant-propagation-pass` - Constant propagation
-- `common-subexpression-eliminator` - DCE
-- `ssa-constructor` - Register allocation
+- `dead-code-eliminator` - Remove dead code
+- `loop-optimizer` - Loop optimizations
 
 ## Canonical References
 

@@ -136,9 +136,9 @@ Current active research in axiomatic semantics:
 |-----------|------------|-----------|
 | **Automation** | "From Hoare Logic to Separation Logic" (2018) | Auto-generating loop invariants |
 | **Fractional permissions** | "Fractional Permissions" (2010) | Concurrent read/write sharing |
-| **Concurrent separation logic** | "Concurrent Separation Logic" (2004) | Verifying lock-free algorithms |
+| **Concurrent separation logic** | O'Hearn, Brookes "Resources, Concurrency and Local Reasoning" (2004/2007) | Verifying lock-free algorithms |
 | **Iris** | "Higher-Order Ghost State" (2015) | Complex concurrency patterns |
-| **Relational verification** | "Relational Hoare Logic" (2008) | Proving equivalence of programs |
+| **Relational verification** | Benton "Simple Relational Correctness Proofs" (2004) | Proving equivalence of programs |
 
 ### Hot Topics
 

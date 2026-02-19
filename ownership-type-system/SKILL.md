@@ -259,11 +259,11 @@ Rules:
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| **Clarke, "Ownership Types for Safe Programming" (1998)** | Original ownership types paper |
-| **Boyland, "Alias Burdens" (2001)** | Aliasing and ownership |
-| **Wagner, "Solving the Aliasing Problem" (2002)** | Practical ownership |
-| **Gay & Aiken, "Language Support for Regions" (PLDI 1998)** | Region-based memory |
-| **Tofte & Talpin, "Region-Based Memory Management" (1997)** | Regions for ML |
+| **Clarke, Potter, Noble, "Ownership Types for Flexible Alias Protection" (OOPSLA 1998)** | Original ownership types paper |
+| **Noble, Vitek, Potter, "Flexible Alias Protection" (ECOOP 1998)** | Conceptual foundation for ownership types |
+| **Boyland, "Alias Burying: Unique Variables Without Destructive Reads" (2001)** | Uniqueness without destructive reads |
+| **Tofte & Talpin, "Region-Based Memory Management" (Information and Computation, 1997)** | Region-based memory for ML |
+| **Clarke, Drossopoulou, "Ownership, Encapsulation and the Disjointness of Type and Effect" (OOPSLA 2002)** | Ownership and effects |
 
 ## Tradeoffs and Limitations
 

@@ -51,7 +51,6 @@ Denotational Semantics:
 ```python
 from typing import Dict, Callable, Generic, TypeVar, Set
 from dataclasses import dataclass
-from functools import fixed_point
 
 # Semantic domains
 Domain = TypeVar('Domain')
@@ -169,10 +168,15 @@ class RecursiveSemantics:
         self.functions = {}
     
     def fix(self, F: Callable[['Value'], 'Value']) -> 'Value':
-        """Fixed-point computation (Y combinator)"""
+        """Fixed-point computation (Kleene iteration)"""
         
-        # Simplified: use recursive function
-        return fixed_point(F)
+        # Start with bottom and iterate
+        x = None
+        while True:
+            fx = F(x)
+            if fx == x:
+                return x
+            x = fx
     
     def sem_letrec(self, x: str, e1: 'Expr', e2: 'Expr', env: Env) -> Value:
         """⟦letrec x = e₁ in e₂⟧"""
@@ -304,10 +308,10 @@ Relationship:
 
 | Reference | Why It Matters |
 |-----------|----------------|
-| **Stoy, "Denotational Semantics of Programming Languages" (1977)** | Definitive textbook on denotational semantics |
+| **Stoy, "Denotational Semantics: The Scott-Strachey Approach to Programming Language Theory" (1977)** | Definitive textbook on denotational semantics |
 | **Winskel, "The Formal Semantics of Programming Languages" (1993)** | Comprehensive treatment |
 | **Abramsky & Jung, "Domain Theory" (1994)** | Mathematical foundations |
-| **Gordon, "Denotational Semantics" (Handbook of Mathematical Logic, 1979)** | Handbook of mathematical logic |
+| **Gordon, "The Denotational Description of Programming Languages: An Introduction" (1979)** | Introductory textbook |
 
 ## Tips
 
@@ -330,7 +334,7 @@ Domain theory and denotational semantics tools:
 |----------|---------------|
 | **Stoy's "Denotational Semantics"** | The foundational text |
 | **Winskel's "Formal Semantics"** | Domain theory for programmers |
-| **Gunther's "Programming Language Semantics"** | Categorical perspective |
+| **Gunter, "Semantics of Programming Languages: Structures and Techniques" (1992)** | Comprehensive coverage with domain theory |
 | **MLton** | Whole-program compiler with semantic analysis |
 
 ### Proof Assistant Formalizations
@@ -344,14 +348,14 @@ Domain theory and denotational semantics tools:
 ### 1. Game Semantics
 - **Approach**: Programs as strategies in games
 - **Advantage**: Captures sequential behavior precisely
-- **Papers**: "Game Semantics" (Hyland & Ong, Abramsky et al.)
+- **Papers**: "Full Abstraction for PCF" (Abramsky, Jagadeesan, Malacaria 2000; Hyland, Ong 2000)
 - **Application**: Full abstraction for PCF, verification
 
 ### 2. Relational Semantics
 - **Approach**: Relations between programs
 - **Advantage**: Proves relational properties
-- **Papers**: "Relational Reasoning about Functions" (Benton et al.)
-- **Application**: Program equivalence, refinement
+- **Papers**: "Simple Relational Correctness Proofs for Static Analyses and Program Transformations" (Benton, 2004)
+- **Application**: Program equivalence, compiler correctness
 
 ### 3. Metric Semantics
 - **Approach**: Programs as points in metric spaces
@@ -362,8 +366,8 @@ Domain theory and denotational semantics tools:
 ### 4. Step-Indexed Semantics
 - **Approach**: Stratified semantic definitions
 - **Advantage**: Handles recursion and step counting
-- **Papers**: "Step-Indexing" (Appel, McAllester)
-- **Application**: Temporal logic, separation logic
+- **Papers**: "An Indexed Model of Recursive Types" (Appel & McAllester, 2001)
+- **Application**: Foundational proof-carrying code, separation logic
 
 ## Implementation Pitfalls
 

@@ -88,8 +88,7 @@ Real-world closure conversion implementations to study:
 ### Key Compiler Implementations
 
 - **GHC via STG**: Top-level thunks, updatable frames
-- **Clean**: Graph rewriting with unique nodes
-- **Clean**: I/o requirements and uniqueness types
+- **Clean**: Graph rewriting with unique nodes, I/O requirements and uniqueness types
 
 ## Research Frontiers
 

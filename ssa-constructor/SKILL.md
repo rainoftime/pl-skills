@@ -338,7 +338,7 @@ class SSAToNormal:
 ## Related Skills
 
 - `constant-propagation-pass` - Dataflow
-- `ssa-constructor` - Register allocation
+- `register-allocator` - Register allocation
 - `common-subexpression-eliminator` - CSE
 
 ## Canonical References

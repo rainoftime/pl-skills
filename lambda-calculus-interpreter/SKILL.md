@@ -88,14 +88,20 @@ Extend interpreter with:
 3. **Handles closures** - Captures lexical environment
 4. **Compares strategies** - Call-by-value, call-by-name, etc.
 
-## Test Cases
-        case ClosureValue("f", body, env):
-            # Apply to (λx. x + 1) and (λx. x)
-            zero = Abs("x", Var("x"))
-            succ = Abs("x", App(Var("f"), Var("x")))
-            # This is simplified; real implementation needs care
-            return n  # Return stored n
-    raise TypeError("Not a Church numeral")
+### Church Encoding Implementation
+
+```python
+def church_to_int(n):
+    """Convert Church numeral to integer"""
+    # Church numeral n is λf. λx. f^n(x)
+    # Apply to successor function and zero
+    succ = lambda x: x + 1
+    return n(succ)(0)
+
+def int_to_church(n):
+    """Convert integer to Church numeral"""
+    # Build: λf. λx. f(f(...f(x)...)) with n applications
+    return lambda f: lambda x: f**n(x) if hasattr(f, '__pow__') else None
 
 # Church arithmetic
 church_add = Abs("m", Abs("n", 
